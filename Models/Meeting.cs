@@ -7,27 +7,39 @@ using System.Text.Json.Serialization;
 namespace honey_beer_server_app.Models
 {
     [Table("meeting")]
-    [PrimaryKey(nameof(PIB), nameof(MeetingId))]
+    [PrimaryKey(nameof(MeetingId))]
     public class Meeting
     {
-        [Key, ForeignKey(nameof(CompanyInstance))]
-        [Column("pib")]
-        public long PIB { get; set; }
-
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key, Column("meeting_id")]
         public long MeetingId { get; set; }
 
         [Required]
-        [Column("date_and_time")]
-        public DateTime DateAndTime { get; set; }
+        [Column("subject")]
+        public string Subject { get; set; }
+
+        [Required]
+        [Column("start_time")]
+        public DateTime StartTime { get; set; }
+
+        [Required]
+        [Column("end_time")]
+        public DateTime EndTime { get; set; }
+
+        [Required]
+        [Column("location")]
+        public string Location { get; set; }
+
+        [ForeignKey(nameof(CompanyInstance))]
+        [Column("pib")]
+        public long? PIB { get; set; }
 
         [JsonIgnore]
         public Company? CompanyInstance { get; set; }
 
         internal bool IsMeetingValid()
         {
-            return (DateAndTime - DateTime.Now).Days>=5;
+            return (StartTime - DateTime.Now).Days >= 5;
         }
     }
 }

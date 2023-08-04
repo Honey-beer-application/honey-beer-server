@@ -11,10 +11,7 @@ using honey_beer_server_app.Data.Functions.Reservations;
 using honey_beer_server_app.DBBrockers;
 using honey_beer_server_app.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Any;
-using System.Text.Json.Serialization;
 
 namespace honey_beer_server_app.Data.DBBrocker.DBBrocker
 {
@@ -33,14 +30,14 @@ namespace honey_beer_server_app.Data.DBBrocker.DBBrocker
             return new CreateCustomer(_context).ExecuteFunction(customer);
         }
 
-        public bool CreateMeeting(Meeting meeting)
+        public bool UpdateMeeting(Meeting meeting)
         {
-            return new CreateMeeting(_context).ExecuteFunction(meeting);
+            return new UpdateMeeting(_context).ExecuteFunction(meeting);
         }
 
-        public bool CreateOffer(Offer offer)
+        public bool CreateOffer(OfferByCompany offerByCompany)
         {
-            return new CreateOffer(_context).ExcecuteFunction(offer);
+            return new CreateOffer(_context).ExcecuteFunction(offerByCompany);
         }
 
         public bool DeleteCompany(Company company)
@@ -61,12 +58,10 @@ namespace honey_beer_server_app.Data.DBBrocker.DBBrocker
 
         public IEnumerable<Offer> GetAllOffers()
         {
-            /*IQueryable<Offer> excludeOffers = _context.Offer.Where(offer => !offer.OffersByCompanies.IsNullOrEmpty());
-            IQueryable<Offer> offers = _context.Offer.Except(excludeOffers);*/
             return from product in _context.Product
                    join offer in _context.Offer
                    on product.ProductId equals offer.ProductId
-                   where !(from o in _context.OfferByCompany select o.OfferId).Contains(offer.OfferId)
+                   where !(from o in _context.OfferByCompany select o.OfferId).Any( off=>off==offer.OfferId)
                    select new Offer()
                    {
                        ProductId = offer.ProductId,
@@ -187,6 +182,25 @@ namespace honey_beer_server_app.Data.DBBrocker.DBBrocker
             return _context.Location;
         }
 
+        public IEnumerable<Meeting> LoadAllMeetings()
+        {
+            return from meeting in _context.Meeting
+                   join companyDB
+                   in _context.Company on meeting.PIB equals companyDB.PIB
+                   into meetingGroup
+                   from c in _context.Company.DefaultIfEmpty()
+                   where c == null && DateTime.Compare(DateTime.Now.AddDays(5),meeting.StartTime)<=0
+                   select new Meeting()
+                   {
+                       MeetingId = meeting.MeetingId,
+                       StartTime = meeting.StartTime,
+                       EndTime = meeting.EndTime,
+                       Subject = meeting.Subject,
+                       Location = meeting.Location,
+                       CompanyInstance = c
+                   };
+        }
+
         public IEnumerable<Product> LoadAllProducts()
         {
             
@@ -199,9 +213,55 @@ namespace honey_beer_server_app.Data.DBBrocker.DBBrocker
             } ;
         }
 
-        public IEnumerable<EventLocation> LoadAllPromotions()
+        public IEnumerable<EventLocation> LoadAllPromotionLocations()
         {
-            return _context.EventLocation.Include(promotion=>promotion.EventInstance);
+            return from eventLocation in _context.EventLocation
+                   join cEvent in _context.Event
+                   on eventLocation.EventId equals cEvent.EventId
+                   join eventType in _context.EventType
+                   on cEvent.EventTypeId equals eventType.EventTypeId
+                   where DateTime.Compare(cEvent.BeginDate, DateTime.Now) <= 0 &&
+                         DateTime.Compare(cEvent.EndDate, DateTime.Now) >= 0 && eventType.Name.Equals("Promotion")
+                   select new EventLocation()
+                   {
+                       EventId = eventLocation.EventId,
+                       EventLocationId = eventLocation.EventLocationId,
+                       Location = eventLocation.Location,
+                       EventInstance = new Event()
+                       {
+                           EventId = cEvent.EventId,
+                           BeginDate = cEvent.BeginDate,
+                           CreationDate = cEvent.CreationDate,
+                           Description = cEvent.Description,
+                           EndDate = cEvent.EndDate,
+                           Title = cEvent.Title,
+                           EventTypeId = cEvent.EventTypeId,
+                           EventTypeInstance = new EventType()
+                           {
+                               EventTypeId = eventType.EventTypeId,
+                               Name = eventType.Name
+                           }
+                       },
+                   };
+        }
+
+        public IEnumerable<Event> LoadAllPromotions()
+        {
+            return from cEvent in _context.Event join eventType in _context.EventType on cEvent.EventTypeId equals eventType.EventTypeId
+                   where DateTime.Compare(cEvent.BeginDate, DateTime.Now) <= 0 &&
+                         DateTime.Compare(cEvent.EndDate, DateTime.Now) >= 0 && eventType.Name.Equals("Promotion")
+                   select new Event()
+                   {
+                       EventId = cEvent.EventId,
+                       CreationDate = cEvent.CreationDate,
+                       Description = cEvent.Description,
+                       BeginDate = cEvent.BeginDate,
+                       EndDate = cEvent.EndDate,
+                       EventTypeId = cEvent.EventTypeId,
+                       EventLocations = (from location in _context.EventLocation where location.EventId == cEvent.EventId select location).ToList(),
+                       Title = cEvent.Title,
+                       EventTypeInstance = eventType
+                   };
         }
 
         public IEnumerable<Reservation> LoadAllReservations()

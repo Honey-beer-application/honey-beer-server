@@ -42,5 +42,7 @@ namespace honey_beer_server_app.Models
         /*[NotMapped]
         [JsonIgnore]*/
         public List<Question> Questions { get; set; }
+
+        public List<EventLocation> EventLocations { get; set; }
     }
 }

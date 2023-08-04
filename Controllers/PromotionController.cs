@@ -18,5 +18,12 @@ namespace honey_beer_server_app.Controllers
         {
             return Ok(_brocker.LoadAllPromotions());
         }
+
+        [HttpGet]
+        [Route("locations")]
+        public ActionResult<IEnumerable<EventLocation>> LoadAllPromotionLocations()
+        {
+            return Ok(_brocker.LoadAllPromotionLocations());
+        }
     }
 }

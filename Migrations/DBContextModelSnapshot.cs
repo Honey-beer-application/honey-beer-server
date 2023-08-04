@@ -17,7 +17,7 @@ namespace honey_beer_server_app.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.8")
+                .HasAnnotation("ProductVersion", "7.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -48,7 +48,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasIndex("AnswerId");
 
-                    b.ToTable("answer", (string)null);
+                    b.ToTable("answer");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.Company", b =>
@@ -79,7 +79,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasIndex("PIB");
 
-                    b.ToTable("company", (string)null);
+                    b.ToTable("company");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.Customer", b =>
@@ -112,7 +112,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasIndex("Email");
 
-                    b.ToTable("customer", (string)null);
+                    b.ToTable("customer");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.CustomerAnswer", b =>
@@ -147,7 +147,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasIndex("FormId");
 
-                    b.ToTable("customer_answer", (string)null);
+                    b.ToTable("customer_answer");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.Discount", b =>
@@ -180,7 +180,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("discount", (string)null);
+                    b.ToTable("discount");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.Event", b =>
@@ -222,26 +222,30 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasIndex("EventTypeId");
 
-                    b.ToTable("event", (string)null);
+                    b.ToTable("event");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.EventLocation", b =>
                 {
                     b.Property<long>("EventId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasColumnName("event_id");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("EventId"));
+                    b.Property<long>("EventLocationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasColumnName("event_location_id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("EventLocationId"));
 
                     b.Property<string>("Location")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("location");
 
-                    b.HasKey("EventId");
+                    b.HasKey("EventId", "EventLocationId");
 
-                    b.ToTable("event_location", (string)null);
+                    b.ToTable("event_location");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.EventType", b =>
@@ -260,7 +264,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasKey("EventTypeId");
 
-                    b.ToTable("event_type", (string)null);
+                    b.ToTable("event_type");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.Form", b =>
@@ -288,7 +292,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasIndex("QRCodeId");
 
-                    b.ToTable("form", (string)null);
+                    b.ToTable("form");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.Location", b =>
@@ -317,15 +321,11 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasKey("LocationId");
 
-                    b.ToTable("location", (string)null);
+                    b.ToTable("location");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.Meeting", b =>
                 {
-                    b.Property<long>("PIB")
-                        .HasColumnType("bigint")
-                        .HasColumnName("pib");
-
                     b.Property<long>("MeetingId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
@@ -333,13 +333,33 @@ namespace honey_beer_server_app.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("MeetingId"));
 
-                    b.Property<DateTime>("DateAndTime")
+                    b.Property<DateTime>("EndTime")
                         .HasColumnType("datetime2")
-                        .HasColumnName("date_and_time");
+                        .HasColumnName("end_time");
 
-                    b.HasKey("PIB", "MeetingId");
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("location");
 
-                    b.ToTable("meeting", (string)null);
+                    b.Property<long?>("PIB")
+                        .HasColumnType("bigint")
+                        .HasColumnName("pib");
+
+                    b.Property<DateTime>("StartTime")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("start_time");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("subject");
+
+                    b.HasKey("MeetingId");
+
+                    b.HasIndex("PIB");
+
+                    b.ToTable("meeting");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.Offer", b =>
@@ -369,7 +389,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasKey("ProductId", "OfferId");
 
-                    b.ToTable("offer", (string)null);
+                    b.ToTable("offer");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.OfferByCompany", b =>
@@ -390,7 +410,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasIndex("ProductId", "OfferId");
 
-                    b.ToTable("offer_by_company", (string)null);
+                    b.ToTable("offer_by_company");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.PersonalEmail", b =>
@@ -401,7 +421,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasKey("Email");
 
-                    b.ToTable("personal_email", (string)null);
+                    b.ToTable("personal_email");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.Product", b =>
@@ -425,7 +445,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasKey("ProductId");
 
-                    b.ToTable("product", (string)null);
+                    b.ToTable("product");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.ProductInLocation", b =>
@@ -446,7 +466,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("product_in_location", (string)null);
+                    b.ToTable("product_in_location");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.QRCode", b =>
@@ -474,7 +494,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasIndex("QRCodeTypeId");
 
-                    b.ToTable("qr_code", (string)null);
+                    b.ToTable("qr_code");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.QRCodeType", b =>
@@ -496,7 +516,7 @@ namespace honey_beer_server_app.Migrations
                     b.HasIndex("QRCodeTypeName")
                         .IsUnique();
 
-                    b.ToTable("qr_code_type", (string)null);
+                    b.ToTable("qr_code_type");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.Question", b =>
@@ -525,7 +545,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasIndex("QuestionTypeId");
 
-                    b.ToTable("question", (string)null);
+                    b.ToTable("question");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.QuestionType", b =>
@@ -544,7 +564,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasKey("QuestionTypeId");
 
-                    b.ToTable("question_type", (string)null);
+                    b.ToTable("question_type");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.Reservation", b =>
@@ -579,7 +599,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("reservation", (string)null);
+                    b.ToTable("reservation");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.ScannedByCustomer", b =>
@@ -594,13 +614,12 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasKey("QRCodeId", "CustomerId");
 
-                    b.HasIndex("CustomerId")
-                        .IsUnique();
+                    b.HasIndex("CustomerId");
 
                     b.HasIndex("QRCodeId")
                         .IsUnique();
 
-                    b.ToTable("scanned_by", (string)null);
+                    b.ToTable("scanned_by");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.SentCompanyEmail", b =>
@@ -622,7 +641,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasKey("PIB", "SentCompanyEmailId");
 
-                    b.ToTable("sent_company_email", (string)null);
+                    b.ToTable("sent_company_email");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.SentPersonalEmail", b =>
@@ -644,7 +663,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasKey("Email", "SentPersonalEmailId");
 
-                    b.ToTable("sent_personal_email", (string)null);
+                    b.ToTable("sent_personal_email");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.ShoppingLocation", b =>
@@ -667,7 +686,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasKey("PIB", "ShoppingLocationId");
 
-                    b.ToTable("shopping_location", (string)null);
+                    b.ToTable("shopping_location");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.TextCustomerAnswer", b =>
@@ -709,7 +728,7 @@ namespace honey_beer_server_app.Migrations
 
                     b.HasIndex("CustomerAnswerInstanceEventId", "CustomerAnswerInstanceQuestionId", "CustomerAnswerInstanceAnswerId", "CustomerAnswerInstanceFormId");
 
-                    b.ToTable("text_customer_answer", (string)null);
+                    b.ToTable("text_customer_answer");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.Answer", b =>
@@ -789,6 +808,17 @@ namespace honey_beer_server_app.Migrations
                     b.Navigation("EventTypeInstance");
                 });
 
+            modelBuilder.Entity("honey_beer_server_app.Models.EventLocation", b =>
+                {
+                    b.HasOne("honey_beer_server_app.Models.Event", "EventInstance")
+                        .WithMany("EventLocations")
+                        .HasForeignKey("EventId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("EventInstance");
+                });
+
             modelBuilder.Entity("honey_beer_server_app.Models.Form", b =>
                 {
                     b.HasOne("honey_beer_server_app.Models.QRCode", "QRCodeInstance")
@@ -802,9 +832,7 @@ namespace honey_beer_server_app.Migrations
                 {
                     b.HasOne("honey_beer_server_app.Models.Company", "CompanyInstance")
                         .WithMany()
-                        .HasForeignKey("PIB")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("PIB");
 
                     b.Navigation("CompanyInstance");
                 });
@@ -971,12 +999,13 @@ namespace honey_beer_server_app.Migrations
 
             modelBuilder.Entity("honey_beer_server_app.Models.Customer", b =>
                 {
-                    b.Navigation("ScannedByCustomerInstance")
-                        .IsRequired();
+                    b.Navigation("ScannedByCustomerInstance");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.Event", b =>
                 {
+                    b.Navigation("EventLocations");
+
                     b.Navigation("Questions");
                 });
 
@@ -999,8 +1028,7 @@ namespace honey_beer_server_app.Migrations
 
             modelBuilder.Entity("honey_beer_server_app.Models.QRCode", b =>
                 {
-                    b.Navigation("ScannedByCustomerInstance")
-                        .IsRequired();
+                    b.Navigation("ScannedByCustomerInstance");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.ShoppingLocation", b =>

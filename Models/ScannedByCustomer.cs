@@ -6,9 +6,11 @@ namespace honey_beer_server_app.Models
 {
     [Table("scanned_by")]
     [PrimaryKey(nameof(QRCodeId),nameof(CustomerId))]
+    [Index(nameof(QRCodeId), IsUnique =true)]
+    [Index(nameof(CustomerId),IsUnique =false)]
     public class ScannedByCustomer
     {
-        [Key,ForeignKey(nameof(QRCode.QRCodeId))]
+        [Key, ForeignKey(nameof(QRCode.QRCodeId))]
         [Column("qr_code_id")]
         public long QRCodeId { get; set; }
 

@@ -17,9 +17,9 @@ namespace honey_beer_server_app.Controllers
             return Ok(_brocker.GetAllOffers());
         }
         [HttpPost]
-        public ActionResult<Offer> CreateOffer(Offer offer) 
+        public ActionResult<bool> CreateOffer(OfferByCompany offerByCompany) 
         {
-            bool created = _brocker.CreateOffer(offer);
+            bool created = _brocker.CreateOffer(offerByCompany);
             if (created)
                 return Ok(created);
             else

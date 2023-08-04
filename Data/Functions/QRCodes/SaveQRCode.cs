@@ -15,7 +15,7 @@ namespace honey_beer_server_app.Data.Functions.QRCodes
             IDbContextTransaction transation = _context.Database.BeginTransaction();
             try
             {
-                qrCode.QRCodeId = (_context.QRCode.Where(qrCode => qrCode.Code.Equals(qrCode.Code)).First()).QRCodeId;
+                qrCode.QRCodeId = (from qrCod in _context.QRCode where qrCod.Code.Equals(qrCode.Code) select qrCod.QRCodeId).First();
                 qrCode.ScannedByCustomerInstance = new ScannedByCustomer
                 {
                     QRCodeId = qrCode.QRCodeId,

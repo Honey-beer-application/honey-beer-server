@@ -13,11 +13,17 @@ namespace honey_beer_server_app.Controllers
 
         public MeetingController(IDBBrocker brocker) => _brocker = brocker;
         [HttpPost]
-        public ActionResult<bool> CreateMeeting(Meeting meeting)
+        [Route("schedule")]
+        public ActionResult<bool> UpdateMeeting(Meeting meeting)
         {
-            bool created = _brocker.CreateMeeting(meeting);
+            bool created = _brocker.UpdateMeeting(meeting);
             return created ==true ? Ok(true) : 
                 Problem(created.ToString(),title:"Problem while creating meeting.");
+        }
+        [HttpGet]
+        public ActionResult<Meeting[]> LoadAllAvailableMeetings() 
+        {
+            return Ok(_brocker.LoadAllMeetings());
         }
     }
 }

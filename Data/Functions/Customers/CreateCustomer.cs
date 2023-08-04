@@ -28,7 +28,7 @@ namespace honey_beer_server_app.Data.Functions.Customers
         public Customer ExecuteFunction(Customer customer)
         {
             if (!IsCustomerValid(customer))
-                throw new ValidationException(_fullMessage);
+                throw new Exception(_fullMessage);
             using IDbContextTransaction transaction = _context.Database.BeginTransaction();
             try
             {
@@ -37,10 +37,10 @@ namespace honey_beer_server_app.Data.Functions.Customers
                 transaction.Commit();
                 return customer;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 transaction.Rollback();
-                throw new RuntimeWrappedException(ex);
+                throw;
             }
         }
 

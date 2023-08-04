@@ -10,9 +10,9 @@ namespace honey_beer_server_app.Data.Functions.Offers
 
         public CreateOffer(DBContext context) => _context = context;
 
-        public bool ExcecuteFunction(Offer offer)
+        public bool ExcecuteFunction(OfferByCompany offer)
         {
-            if (!offer.IsOfferValid())
+            if (offer.OfferInstance != null&&!offer.OfferInstance.IsOfferValid())
                 return false;
             bool created = false;
             IDbContextTransaction transaction = _context.Database.BeginTransaction();
