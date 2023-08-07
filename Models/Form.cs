@@ -19,9 +19,6 @@ namespace honey_beer_server_app.Models
         [Required]
         [Column("creation_date")]
         public DateTime CreationDate { get; set; }
-        [Required]
-        [Column("event_id")]
-        public long EventId { get; set; }
 
         [ForeignKey(nameof(QRCodeInstance))]
         [Column("qr_code_id")]

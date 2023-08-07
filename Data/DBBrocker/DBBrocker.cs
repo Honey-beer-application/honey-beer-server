@@ -334,9 +334,9 @@ namespace honey_beer_server_app.Data.DBBrocker.DBBrocker
             return new SaveEmail(_context).ExecuteFunction(email);
         }
 
-        public bool SaveForm(Form form)
+        public bool SaveForm(Event eventForm)
         {
-            return new SaveForm(_context).ExecuteFunction(form);
+            return new SaveForm(_context).ExecuteFunction(eventForm);
         }
 
         public bool SaveOfferByCompany(OfferByCompany offerByCompany)

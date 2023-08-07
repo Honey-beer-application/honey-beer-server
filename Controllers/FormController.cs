@@ -1,6 +1,7 @@
 ﻿using honey_beer_server_app.Data.DBBrocker.DBBrocker;
 using honey_beer_server_app.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json.Serialization;
 
 namespace honey_beer_server_app.Controllers
 {
@@ -13,9 +14,9 @@ namespace honey_beer_server_app.Controllers
         public FormController(IDBBrocker brocker) => _brocker = brocker;
 
         [HttpPost]
-        public ActionResult<bool> saveForm(Form form)
+        public ActionResult<bool> saveForm(Event eventForm)
         {
-            bool saved = _brocker.SaveForm(form);
+            bool saved = _brocker.SaveForm(eventForm);
             if (saved)
                 return Ok(saved);
             else

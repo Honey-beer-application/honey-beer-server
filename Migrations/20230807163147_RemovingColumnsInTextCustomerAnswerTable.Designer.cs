@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using honey_beer_server_app.DBBrockers;
 
@@ -11,9 +12,11 @@ using honey_beer_server_app.DBBrockers;
 namespace honey_beer_server_app.Migrations
 {
     [DbContext(typeof(DBContext))]
-    partial class DBContextModelSnapshot : ModelSnapshot
+    [Migration("20230807163147_RemovingColumnsInTextCustomerAnswerTable")]
+    partial class RemovingColumnsInTextCustomerAnswerTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -279,6 +282,10 @@ namespace honey_beer_server_app.Migrations
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("creation_date");
+
+                    b.Property<long>("EventId")
+                        .HasColumnType("bigint")
+                        .HasColumnName("event_id");
 
                     b.Property<long?>("QRCodeId")
                         .HasColumnType("bigint")

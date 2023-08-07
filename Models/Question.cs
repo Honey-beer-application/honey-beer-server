@@ -31,7 +31,7 @@ namespace honey_beer_server_app.Models
 
 
         [JsonIgnore]
-        public Event EventInstance { get; set; }
+        public Event? EventInstance { get; set; }
 
 
         [NotMapped]

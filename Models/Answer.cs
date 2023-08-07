@@ -27,9 +27,9 @@ namespace honey_beer_server_app.Models
         //Notation relationships
         [NotMapped]
         [JsonIgnore]
-        public List<CustomerAnswer> customerAnswers { get; set; }
+        public List<CustomerAnswer>? customerAnswers { get; set; }
 
         [JsonIgnore]
-        public Question EventQuestion { get; set; }
+        public Question? EventQuestion { get; set; }
     }
 }

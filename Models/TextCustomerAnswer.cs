@@ -26,7 +26,7 @@ namespace honey_beer_server_app.Models
 
 
         //Notation relationships
-        [JsonIgnore] public CustomerAnswer CustomerAnswerInstance { get; set; } = new CustomerAnswer();
+        [JsonIgnore] [NotMapped] public CustomerAnswer CustomerAnswerInstance { get; set; } = new CustomerAnswer();
 
     }
 }

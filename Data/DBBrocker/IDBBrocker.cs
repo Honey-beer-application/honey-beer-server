@@ -24,7 +24,7 @@ namespace honey_beer_server_app.Data.DBBrocker.DBBrocker
         IEnumerable<Event> LoadAllPromotions();
         IEnumerable<Discount> LoadAllDiscounts();
         IEnumerable<ShoppingLocation> LoadAllShoppingLocations();
-        bool SaveForm(Form form);
+        bool SaveForm(Event eventForm);
         bool SendEmail(SentPersonalEmail email);
         bool SaveAllVotes(List<CustomerAnswer> votes);
         bool SaveOfferByCompany(OfferByCompany offerByCompany);

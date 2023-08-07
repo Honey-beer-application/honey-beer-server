@@ -39,7 +39,7 @@ namespace honey_beer_server_app.Models
         public Customer? Customer { get; set; } = null;
 
         [NotMapped]
-        public TextCustomerAnswer? TextCustomerAnswers { get; set; } = null;
+        public TextCustomerAnswer? TextCustomerAnswer { get; set; } = null;
 
     }
 }
