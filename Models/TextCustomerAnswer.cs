@@ -9,24 +9,26 @@ namespace honey_beer_server_app.Models
     [PrimaryKey(nameof(EventId), nameof(QuestionId), nameof(AnswerId), nameof(FormId))]
     public class TextCustomerAnswer
     {
-        [Key,ForeignKey(nameof(CustomerAnswer)), Column("event_id")]
+        [Key, Column("event_id"), ForeignKey(nameof(CustomerAnswer.EventId))]
         public long EventId { get; set; }
 
-        [Key, ForeignKey(nameof(CustomerAnswer)), Column("question_id")]
+        [Key, Column("question_id"), ForeignKey(nameof(CustomerAnswer.QuestionId))]
         public long QuestionId { get; set; }
-  
-        [Key, ForeignKey(nameof(CustomerAnswer)), Column("answer_id")]
+
+        [Key, Column("answer_id"), ForeignKey(nameof(CustomerAnswer.AnswerId))]
         public long AnswerId { get; set; }
-  
-        [Key, ForeignKey(nameof(CustomerAnswer)), Column("form_id")]
+
+        [Key, Column("form_id"), ForeignKey(nameof(CustomerAnswer.FormId))]
         public long FormId { get; set; }
+
         [Required]
         [Column("text")]
         public string Text { get; set; }
 
 
+
         //Notation relationships
-        [JsonIgnore] [NotMapped] public CustomerAnswer CustomerAnswerInstance { get; set; } = new CustomerAnswer();
+        [JsonIgnore] public CustomerAnswer? CustomerAnswerInstance { get; set; } = new CustomerAnswer();
 
     }
 }

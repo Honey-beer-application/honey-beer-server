@@ -703,12 +703,26 @@ namespace honey_beer_server_app.Migrations
                         .HasColumnType("bigint")
                         .HasColumnName("form_id");
 
+                    b.Property<long?>("CustomerAnswerInstanceAnswerId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("CustomerAnswerInstanceEventId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("CustomerAnswerInstanceFormId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("CustomerAnswerInstanceQuestionId")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("Text")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("text");
 
                     b.HasKey("EventId", "QuestionId", "AnswerId", "FormId");
+
+                    b.HasIndex("CustomerAnswerInstanceEventId", "CustomerAnswerInstanceQuestionId", "CustomerAnswerInstanceAnswerId", "CustomerAnswerInstanceFormId");
 
                     b.ToTable("text_customer_answer");
                 });
@@ -961,6 +975,15 @@ namespace honey_beer_server_app.Migrations
                         .IsRequired();
 
                     b.Navigation("CompanyInstance");
+                });
+
+            modelBuilder.Entity("honey_beer_server_app.Models.TextCustomerAnswer", b =>
+                {
+                    b.HasOne("honey_beer_server_app.Models.CustomerAnswer", "CustomerAnswerInstance")
+                        .WithMany()
+                        .HasForeignKey("CustomerAnswerInstanceEventId", "CustomerAnswerInstanceQuestionId", "CustomerAnswerInstanceAnswerId", "CustomerAnswerInstanceFormId");
+
+                    b.Navigation("CustomerAnswerInstance");
                 });
 
             modelBuilder.Entity("honey_beer_server_app.Models.Company", b =>

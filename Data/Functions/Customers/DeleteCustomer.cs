@@ -16,6 +16,7 @@ namespace honey_beer_server_app.Data.Functions.Customers
             try
             {
                 _context.Customer.Remove(customer);
+                _context.PersonalEmail.Remove(customer.PersonalEmailInstance);
                 transaction.Commit();
                 deleted = true;
             }

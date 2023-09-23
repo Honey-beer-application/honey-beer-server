@@ -32,13 +32,13 @@ namespace honey_beer_server_app.Data.Functions.Forms
                         ca.Date = DateTime.Now;
                         if (question.QuestionTypeInstance.Name.Equals("Text"))
                         {
-                            ca.TextCustomerAnswer = new TextCustomerAnswer();
+                           /* ca.TextCustomerAnswer = new TextCustomerAnswer();
                             ca.TextCustomerAnswer.Text = answer.Value;
                             ca.TextCustomerAnswer.EventId = ca.EventId;
                             ca.TextCustomerAnswer.AnswerId = ca.AnswerId;
                             ca.TextCustomerAnswer.QuestionId = ca.QuestionId;
                             ca.TextCustomerAnswer.FormId = form.FormId;
-                            _context.TextCustomerAnswer.Add(ca.TextCustomerAnswer);
+                            _context.TextCustomerAnswer.Add(ca.TextCustomerAnswer);*/
                         }
                         _context.CustomerAnswer.Add(ca);
                     });

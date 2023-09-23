@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "LtZc/EzgOZpQfgq5v3VG9f0g1Lz29L9A6KbaQcWfe74=",
+  "Source": "honey-beer-server-app",
+  "BasePath": "_content/honey-beer-server-app",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

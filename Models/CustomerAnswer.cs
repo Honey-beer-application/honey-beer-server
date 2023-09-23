@@ -38,8 +38,8 @@ namespace honey_beer_server_app.Models
         [JsonIgnore]
         public Customer? Customer { get; set; } = null;
 
-        [NotMapped]
-        public TextCustomerAnswer? TextCustomerAnswer { get; set; } = null;
+        /*[JsonIgnore]
+        public TextCustomerAnswer? TextCustomerAnswer { get; set; } = null;*/
 
     }
 }
