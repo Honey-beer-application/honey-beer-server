@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>D:\FON\Diplomski\Aplikacija\server-published</_PublishTargetUrl>
-    <History>True|2023-09-23T21:08:21.0501961Z;True|2023-09-23T22:58:30.1338792+02:00;True|2023-09-23T22:07:56.7452749+02:00;</History>
+    <History>True|2023-11-30T02:16:09.1136661Z;True|2023-09-25T14:40:26.1845646+02:00;True|2023-09-23T23:37:13.3171806+02:00;True|2023-09-23T23:08:21.0501961+02:00;True|2023-09-23T22:58:30.1338792+02:00;True|2023-09-23T22:07:56.7452749+02:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

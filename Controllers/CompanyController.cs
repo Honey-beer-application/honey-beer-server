@@ -1,12 +1,15 @@
 ﻿using honey_beer_server_app.Data.DBBrocker.DBBrocker;
 using honey_beer_server_app.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace honey_beer_server_app.Controllers
 {
+    [EnableCors("MySpecificOrigins")]
     [Route("api/[controller]")]
     [ApiController]
+    
     public class CompanyController : ControllerBase
     {
         private readonly IDBBrocker _brocker;

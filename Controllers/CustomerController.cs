@@ -2,9 +2,11 @@
 using honey_beer_server_app.Models;
 using honey_beer_server_app.Data.DBBrocker.DBBrocker;
 using System.Runtime.CompilerServices;
+using Microsoft.AspNetCore.Cors;
 
 namespace honey_beer_server_app.Controllers
 {
+    [EnableCors("MySpecificOrigins")]
     [ApiController]
     [Route("api/[controller]")]
     public class CustomerController : ControllerBase
