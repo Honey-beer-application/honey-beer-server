@@ -1,0 +1,1 @@
+]RGD:\FON\master\Aplikacija\honey-beer-server\honey-beer-server-app.csproj¢net6.0òCSharp10
