@@ -23,9 +23,9 @@ namespace honey_beer_server_app.Models
         public long ProductId { get; set; }
 
 
-        public ShoppingLocation ShoppingLocationInstance { get; set; }
+        public ShoppingLocation ShoppingLocationInstance { get; set; } = new ShoppingLocation();
 
         [NotMapped]
-        public Product ProductInstance { get; set; }
+        public Product ProductInstance { get; set; } = new Product();
     }
 }

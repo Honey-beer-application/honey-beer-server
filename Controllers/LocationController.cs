@@ -1,4 +1,5 @@
-﻿using honey_beer_server_app.Data.DBBrocker.DBBrocker;
+﻿using honey_beer_server_app.Models;
+using honey_beer_server_app.Services.LocationService;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,13 +10,13 @@ namespace honey_beer_server_app.Controllers
     [Route("api/[controller]")]
     public class LocationController : ControllerBase
     {
-        private readonly IDBBrocker _brocker;
+        private readonly ILocationService _locationService;
 
-        public LocationController(IDBBrocker brocker) =>_brocker = brocker;
+        public LocationController(ILocationService locationService) =>_locationService = locationService;
         [HttpGet]
-        public IActionResult LoadAllLocations()
+        public ActionResult<List<Location>> LoadAllLocations()
         {
-            return Ok(_brocker.LoadAllLocations());
+            return Ok(_locationService.LoadAllLocations());
         }
     }
 }

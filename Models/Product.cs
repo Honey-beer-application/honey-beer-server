@@ -11,26 +11,26 @@ namespace honey_beer_server_app.Models
     public class Product
     {
         [Key]
-        [Column("product_id")]
+        [Column("product_id"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long ProductId { get; set; }
 
         [Required]
         [Column("name")]
-        public string name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         [Required]
         [Column("description")]
-        public string description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
 
         //Notation relationships
         [NotMapped]
         [JsonIgnore]
-        public List<Reservation>? reservations { get; set; }
+        public List<Reservation>? Reservations { get; set; }
 
         [NotMapped]
         [JsonIgnore]
-        public List<Discount>? discounts { get; set; }
+        public List<Discount>? Discounts { get; set; }
         [JsonIgnore]
         public List<Offer>? OfferInstance { get; set; }
         public List<ProductInLocation>? LocationsForProduct { get; set; }

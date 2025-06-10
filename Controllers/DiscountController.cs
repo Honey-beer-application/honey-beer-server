@@ -1,5 +1,5 @@
-﻿using honey_beer_server_app.Data.DBBrocker.DBBrocker;
-using honey_beer_server_app.Models;
+﻿using honey_beer_server_app.Models;
+using honey_beer_server_app.Services.DiscountService;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,15 +10,15 @@ namespace honey_beer_server_app.Controllers
     [Route("api/[controller]")]
     public class DiscountController : ControllerBase
     {
-        private readonly IDBBrocker _brocker;
+        private readonly IDiscountService _discountService;
 
-        public DiscountController(IDBBrocker brocker) =>_brocker = brocker;
+        public DiscountController(IDiscountService discountService) => _discountService = discountService;
 
 
         [HttpGet]
-        public ActionResult<Discount> LoadAllDiscounts()
+        public ActionResult<List<Discount>> LoadAllDiscounts()
         {
-            return Ok(_brocker.LoadAllDiscounts());
+            return Ok(_discountService.LoadAllDiscounts());
         }
     }
 }

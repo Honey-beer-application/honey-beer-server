@@ -1,5 +1,5 @@
-﻿using honey_beer_server_app.Data.DBBrocker.DBBrocker;
-using honey_beer_server_app.Models;
+﻿using honey_beer_server_app.Models;
+using honey_beer_server_app.Services.ShoppingLocationService;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,15 +10,15 @@ namespace honey_beer_server_app.Controllers
     [Route("api/[controller]")]
     public class ShoppingLocationController : ControllerBase
     {
-        private readonly IDBBrocker _brocker;
+        private readonly IShoppingLocationService _shoppingLocationService;
 
-        public ShoppingLocationController(IDBBrocker brocker) => _brocker = brocker;
+        public ShoppingLocationController(IShoppingLocationService shoppingLocationService) => _shoppingLocationService = shoppingLocationService;
 
 
         [HttpGet]
-        public ActionResult<ShoppingLocation> LoadAllShoppingLocations()
+        public ActionResult<List<ShoppingLocation>> LoadAllShoppingLocations()
         {
-            return Ok(_brocker.LoadAllShoppingLocations());
+            return Ok(_shoppingLocationService.LoadAllShoppingLocations());
         }
     }
 }

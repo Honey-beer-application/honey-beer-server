@@ -1,5 +1,5 @@
-﻿using honey_beer_server_app.Data.DBBrocker.DBBrocker;
-using honey_beer_server_app.Models;
+﻿using honey_beer_server_app.Models;
+using honey_beer_server_app.Services.ReservationService;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,28 +10,34 @@ namespace honey_beer_server_app.Controllers
     [ApiController]
     public class ReservationController : ControllerBase
     {
-        private readonly IDBBrocker _brocker;
+        private readonly IReservationService _reservationService;
 
-        public ReservationController(IDBBrocker brocker) => _brocker = brocker;
+        public ReservationController(IReservationService reservationService) => _reservationService = reservationService;
         [HttpGet]
         [Route("getAllReservations")]
-        public ActionResult<IEnumerable<Reservation>> LoadAllReservations()
+        public ActionResult<List<Reservation>> LoadAllReservations()
         {
-            return Ok(_brocker.LoadAllReservations());
+            return Ok(_reservationService.LoadAllReservations());
         }
         [HttpPost]
         [Route("selectReservations")]
-        public ActionResult<IEnumerable<Reservation>> SelectReservations(Reservation reservation)
+        public ActionResult<List<Reservation>> SelectReservations(Reservation reservation)
         {
-            return Ok(_brocker.SelectReservations(reservation));
+            return Ok(_reservationService.SelectReservations(reservation));
         }
         [HttpPost]
         [Route("saveReservation")]
         public ActionResult<bool> SaveReservation(Reservation reservation)
         {
-            bool saved = _brocker.SaveReservation(reservation);
-            return saved ? Ok(saved) : 
-                Problem(saved.ToString(), title: "Error while savimg reservation.");
+            try
+            {
+                return Ok(_reservationService.SaveReservation(reservation));
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message, title: "Error while savimg reservation.");
+            }
+                
         }
     }
 }

@@ -10,19 +10,19 @@ namespace honey_beer_server_app.Models
     public class CustomerAnswer
     {
         [Key, ForeignKey(nameof(Models.Answer.EventId)), Column("event_id")]
-        public long EventId { get; set; }
+        public long EventId { get; set; } = 0;
 
         [Key, ForeignKey(nameof(Models.Answer.QuestionId)), Column("question_id")]
-        public long QuestionId { get; set; }
+        public long QuestionId { get; set; } = 0;
 
         [Key, ForeignKey(nameof(Models.Answer.AnswerId)), Column("answer_id")]
-        public long AnswerId { get; set; }
+        public long AnswerId { get; set; } = 0;
 
         [Key, ForeignKey(nameof(Models.Form)), Column("form_id")]
-        public long FormId { get; set; }
+        public long FormId { get; set; } = 0;
         [Required]
         [Column("date")]
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; } = DateTime.Now;
         [ForeignKey(nameof(Models.Customer))]
         [Column("customer_id")]
         public long? CustomerId { get; set; }
@@ -30,16 +30,16 @@ namespace honey_beer_server_app.Models
         //Notation relationships
         
         [JsonIgnore]
-        public Answer? Answer { get; set; } = null;
+        public Answer? Answer { get; set; }
 
         [JsonIgnore]
-        public Form? Form { get; set; } = null;
+        public Form? Form { get; set; }
 
         [JsonIgnore]
-        public Customer? Customer { get; set; } = null;
+        public Customer? Customer { get; set; }
 
         [JsonIgnore,NotMapped]
-        public TextCustomerAnswer? TextCustomerAnswer { get; set; } = null;
+        public TextCustomerAnswer? TextCustomerAnswer { get; set; }
 
     }
 }

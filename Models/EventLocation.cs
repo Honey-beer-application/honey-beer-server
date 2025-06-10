@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json.Serialization;
 
 namespace honey_beer_server_app.Models
 {
@@ -23,8 +21,8 @@ namespace honey_beer_server_app.Models
 
         [Required]
         [Column("location")]
-        public string Location { get; set; }
+        public string Location { get; set; } = string.Empty;
 
-        public Event EventInstance { get; set; }
+        public Event EventInstance { get; set; } = new Event();
     }
 }

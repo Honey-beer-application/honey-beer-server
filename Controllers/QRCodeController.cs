@@ -1,5 +1,5 @@
-﻿using honey_beer_server_app.Data.DBBrocker.DBBrocker;
-using honey_beer_server_app.Models;
+﻿using honey_beer_server_app.Models;
+using honey_beer_server_app.Services.QRCodeService;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,13 +10,19 @@ namespace honey_beer_server_app.Controllers
     [Route("api/[controller]")]
     public class QRCodeController : ControllerBase
     {
-        private readonly IDBBrocker _database;
-        public QRCodeController(IDBBrocker database) => this._database = database;
+        private readonly IQRCodeService _qrCodeService;
+        public QRCodeController(IQRCodeService qRCodeService) => _qrCodeService = qRCodeService;
         [HttpPost]
-        public IActionResult SaveQRCode(QRCode qrCode)
+        public ActionResult<bool> SaveQRCode(QRCode qrCode)
         {
-            bool scanned = _database.SaveQRCode(qrCode);
-            return scanned?Ok(scanned):Problem(scanned.ToString(),title:"Problem while saving QR code");
+            try
+            {
+                return Ok(_qrCodeService.SaveQRCode(qrCode));
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message, title: "Problem while saving QR code");
+            }
         }
     }
 }

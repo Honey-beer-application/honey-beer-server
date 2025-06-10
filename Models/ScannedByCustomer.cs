@@ -12,11 +12,11 @@ namespace honey_beer_server_app.Models
     {
         [Key, ForeignKey(nameof(QRCode.QRCodeId))]
         [Column("qr_code_id")]
-        public long QRCodeId { get; set; }
+        public long QRCodeId { get; set; } = 0;
 
 
-        [Key,ForeignKey(nameof(Customer.CustomerId))]
+        [Key, ForeignKey(nameof(Customer.CustomerId))]
         [Column("sutomer_id")]
-        public long CustomerId { get; set; }
+        public long CustomerId { get; set; } = 0;
     }
 }

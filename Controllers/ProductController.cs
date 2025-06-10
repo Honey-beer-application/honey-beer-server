@@ -1,5 +1,5 @@
-﻿using honey_beer_server_app.Data.DBBrocker.DBBrocker;
-using honey_beer_server_app.Models;
+﻿using honey_beer_server_app.Models;
+using honey_beer_server_app.Services.ProductService;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,15 +8,15 @@ namespace honey_beer_server_app.Controllers
     [EnableCors("MySpecificOrigins")]
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : Controller
+    public class ProductController : ControllerBase
     {
-        private readonly IDBBrocker _brocker;
+        private readonly IProductService _productService;
 
-        public ProductController(IDBBrocker brocker) =>_brocker = brocker;
+        public ProductController(IProductService productService) => _productService = productService;
         [HttpGet]
-        public ActionResult<Product> GetAllProducts()
+        public ActionResult<List<Product>> GetAllProducts()
         {
-            return Ok(_brocker.LoadAllProducts());
+            return Ok(_productService.GetAllProducts());
         }
     }
 }

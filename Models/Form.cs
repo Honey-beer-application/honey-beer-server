@@ -12,13 +12,13 @@ namespace honey_beer_server_app.Models
     [PrimaryKey(nameof(FormId))]
     public class Form
     {
-        
+
         [Key, Column("form_id")]
-        public long FormId { get; set; }
+        public long FormId { get; set; } = 0;
 
         [Required]
         [Column("creation_date")]
-        public DateTime CreationDate { get; set; }
+        public DateTime CreationDate { get; set; } = DateTime.Now;
 
         [ForeignKey(nameof(QRCodeInstance))]
         [Column("qr_code_id")]

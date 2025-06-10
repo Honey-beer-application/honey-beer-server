@@ -10,20 +10,20 @@ namespace honey_beer_server_app.Models
     public class Reservation
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Key,Column("reservation_id")]
-        public long ReservationId { get; set; }
-        [Key,ForeignKey(nameof(Product))]
+        [Key, Column("reservation_id")]
+        public long ReservationId { get; set; } = 0;
+        [Key, ForeignKey(nameof(Product))]
         [Column("product_id")]
-        public long ProductId { get; set; }
-        [Key,ForeignKey(nameof(Company))]
-        [Column("pib")]
-        public long PIB { get; set; }
+        public long ProductId { get; set; } = 0;
+        [Key, ForeignKey(nameof(Company))]
+        [Column("pib"), Range(minimum: 10000001, maximum: 99999999, ErrorMessage = "PIB is not valid.")]
+        public long PIB { get; set; } = 0;
         [Required]
         [Column("amount")]
-        public int Amount { get; set; }
+        public int Amount { get; set; } = 0;
         [Required]
         [Column("delivery")]
-        public DateTime? Delivery { get; set; } = null;
+        public DateTime? Delivery { get; set; }
 
         public Product? ProductInstance { get; set; }
         [JsonIgnore]

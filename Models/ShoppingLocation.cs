@@ -9,7 +9,7 @@ namespace honey_beer_server_app.Models
     [PrimaryKey(nameof(PIB), nameof(ShoppingLocationId))]
     public class ShoppingLocation
     {
-        [Key, ForeignKey(nameof(CompanyInstance)), Column("pib")]
+        [Key, ForeignKey(nameof(CompanyInstance)), Column("pib"), Range(minimum: 10000001, maximum: 99999999, ErrorMessage = "PIB is not valid.")]
         public long PIB { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -17,19 +17,19 @@ namespace honey_beer_server_app.Models
         public long ShoppingLocationId { get; set; }
         [Required]
         [Column("location")]
-        public string Location { get; set; }
+        public string Location { get; set; } = string.Empty;
 
 
         [JsonIgnore]
-        public List<Discount> Discounts { get; set; }
+        public List<Discount> Discounts { get; set; } = new List<Discount>();
 
 
-        public Company CompanyInstance { get; set; }
+        public Company CompanyInstance { get; set; } = new Company();
 
         [JsonIgnore]
-        public List<ProductInLocation> ProductsInLocationInstance { get; set; }
+        public List<ProductInLocation> ProductsInLocationInstance { get; set; } = new List<ProductInLocation>();
 
         [NotMapped]
-        public List<Product> ProductsInLocation { get; set; }
+        public List<Product> ProductsInLocation { get; set; } = new List<Product>();
     }
 }

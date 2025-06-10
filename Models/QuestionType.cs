@@ -10,9 +10,9 @@ namespace honey_beer_server_app.Models
     {
         [Key]
         [Column("question_type_id")]
-        public long QuestionTypeId { get; set; }
+        public long QuestionTypeId { get; set; } = 0;
         [Required]
         [Column("name")]
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
     }
 }

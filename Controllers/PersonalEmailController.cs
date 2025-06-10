@@ -1,5 +1,5 @@
-﻿using honey_beer_server_app.Data.DBBrocker.DBBrocker;
-using honey_beer_server_app.Models;
+﻿using honey_beer_server_app.Models;
+using honey_beer_server_app.Services.PersonalEmailService;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,14 +10,21 @@ namespace honey_beer_server_app.Controllers
     [Route("api/[controller]")]
     public class PersonalEmailController : ControllerBase
     {
-        private readonly IDBBrocker _brocker;
+        private readonly IPersonalEmailService _personalEmailService;
 
-        public PersonalEmailController(IDBBrocker brocker) => _brocker = brocker;
+        public PersonalEmailController(IPersonalEmailService personalEmailService) => _personalEmailService = personalEmailService;
         [HttpPost]
         public ActionResult<bool> SendEmail(SentPersonalEmail sentEmail)
         {
-            bool sent = _brocker.SendEmail(sentEmail);
-            return sent? Ok(sent) : Problem(sent.ToString(), title:"Error while saving sent e-mail");
+            try
+            {
+                return Ok(_personalEmailService.SendEmail(sentEmail));
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message, title: "Error while saving sent e-mail");
+            }
+            
         }
     }
 }

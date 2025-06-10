@@ -10,20 +10,20 @@ namespace honey_beer_server_app.Models
     public class TextCustomerAnswer
     {
         [Key, Column("event_id"), ForeignKey(nameof(CustomerAnswer.EventId))]
-        public long EventId { get; set; }
+        public long EventId { get; set; } = 0;
 
         [Key, Column("question_id"), ForeignKey(nameof(CustomerAnswer.QuestionId))]
-        public long QuestionId { get; set; }
+        public long QuestionId { get; set; } = 0;
 
         [Key, Column("answer_id"), ForeignKey(nameof(CustomerAnswer.AnswerId))]
-        public long AnswerId { get; set; }
+        public long AnswerId { get; set; } = 0;
 
         [Key, Column("form_id"), ForeignKey(nameof(CustomerAnswer.FormId))]
-        public long FormId { get; set; }
+        public long FormId { get; set; } = 0;
 
         [Required]
         [Column("text")]
-        public string Text { get; set; }
+        public string Text { get; set; } = string.Empty;
 
 
 

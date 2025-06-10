@@ -11,17 +11,17 @@ namespace honey_beer_server_app.Models
     public class Company
     {
         [Key]
-        [Column("pib")]
+        [Column("pib"), Range(minimum:10000001, maximum:99999999,ErrorMessage = "PIB is not valid.")]
         public long PIB { get; set; }
         [Required]
         [Column("name")]
-        public string Name { get; set; }
+        public string Name { get; set; } = "";
         [Required]
-        [Column("email")]
-        public string Email { get; set; }
+        [Column("email"), RegularExpression(pattern: @"^\S+@\S+\.\S+$", ErrorMessage = "Company email is invalid.")]
+        public string Email { get; set; } = "";
         [Required]
         [Column("password")]
-        public string Password { get; set; }
+        public string Password { get; set; } = "";
         //Notation relationships
         [NotMapped]
         [JsonIgnore]
@@ -37,35 +37,5 @@ namespace honey_beer_server_app.Models
         [NotMapped]
         [JsonIgnore]
         public List<SentCompanyEmail> sentCompanyEmails { get; set; } = new ();
-        private bool IsPIBValid()
-        {
-            return PIB >= 10000001 & PIB <= 99999999;
-        }
-        private bool IsEmailValid()
-        {
-            Regex _emailRegex = new("^\\S+@\\S+\\.\\S+$");
-            return _emailRegex.IsMatch(this.Email);
-        }
-        public bool IsCompanyValid()
-        {
-            List<string> messages = new List<string>();
-            if (!IsPIBValid())
-                messages.Add("PIB is not valid.\n");
-            if (Email == null)
-                messages.Add("Email doesn't exist.\n");
-            else
-            if (!IsEmailValid())
-                messages.Add("Email is not valid.\n");
-            if (messages.Count > 0)
-            {
-                string message = "";
-                foreach (string line in messages)
-                {
-                    message += line;
-                }
-                throw new Exception(message);
-            }
-            return IsPIBValid() && IsEmailValid();
-        }
     }
 }

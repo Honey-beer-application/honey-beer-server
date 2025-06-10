@@ -1,5 +1,5 @@
-﻿using honey_beer_server_app.Data.DBBrocker.DBBrocker;
-using honey_beer_server_app.Models;
+﻿using honey_beer_server_app.Models;
+using honey_beer_server_app.Services.PromotionService;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,22 +10,22 @@ namespace honey_beer_server_app.Controllers
     [Route("api/[controller]")]
     public class PromotionController : ControllerBase
     {
-        private readonly IDBBrocker _brocker;
+        private readonly IPromotionService _promotionService;
 
-        public PromotionController(IDBBrocker brocker) =>_brocker = brocker;
+        public PromotionController(IPromotionService promotionService) =>_promotionService = promotionService;
 
 
         [HttpGet]
-        public ActionResult<IEnumerable<EventLocation>> LoadAllPromotions()
+        public ActionResult<List<Event>> LoadAllPromotions()
         {
-            return Ok(_brocker.LoadAllPromotions());
+            return Ok(_promotionService.LoadAllPromotions());
         }
 
         [HttpGet]
         [Route("locations")]
-        public ActionResult<IEnumerable<EventLocation>> LoadAllPromotionLocations()
+        public ActionResult<List<EventLocation>> LoadAllPromotionLocations()
         {
-            return Ok(_brocker.LoadAllPromotionLocations());
+            return Ok(_promotionService.LoadAllPromotionLocations());
         }
     }
 }

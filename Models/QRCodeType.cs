@@ -10,9 +10,9 @@ namespace honey_beer_server_app.Models
     {
         [Key]
         [Column("qr_code_type_id")]
-        public long QRCodeTypeId { get; set; }
+        public long QRCodeTypeId { get; set; } = 0;
         [Required]
         [Column("qr_code_type_name")]
-        public string QRCodeTypeName { get; set; }
+        public string QRCodeTypeName { get; set; } = string.Empty;
     }
 }

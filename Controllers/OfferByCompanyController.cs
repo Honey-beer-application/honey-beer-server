@@ -1,5 +1,5 @@
-﻿using honey_beer_server_app.Data.DBBrocker.DBBrocker;
-using honey_beer_server_app.Models;
+﻿using honey_beer_server_app.Models;
+using honey_beer_server_app.Services.OfferByCompanyService;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,40 +10,46 @@ namespace honey_beer_server_app.Controllers
     [ApiController]
     public class OfferByCompanyController : ControllerBase
     {
-        private readonly IDBBrocker _brocker;
+        private readonly IOfferByCompanyService _offerByCompanyService;
 
-        public OfferByCompanyController(IDBBrocker brocker) => _brocker = brocker;
-        [HttpPost]
+        public OfferByCompanyController(IOfferByCompanyService offerByCompanyService) => _offerByCompanyService = offerByCompanyService;
+        [HttpGet]
         [Route("get")]
-        public ActionResult<IEnumerable<OfferByCompany>> LoadAllOffersByCompany(Company company)
+        public ActionResult<List<OfferByCompany>> LoadAllOffersByCompany()
         {
-            return Ok(_brocker.GetAllOffersByCompany(company));
+            return Ok(_offerByCompanyService.GetAllOffersByCompany());
         }
         [HttpPost]
         [Route("save")]
         public ActionResult<bool> SaveOfferByCompany(OfferByCompany offerByCompany)
         {
-            bool saved = _brocker.SaveOfferByCompany(offerByCompany);
-            if (saved)
-                return Ok(saved);
-            else
-                return Problem(saved.ToString(), title: "Error while saving offer by company.");
+            try
+            {
+                return Ok(_offerByCompanyService.SaveOfferByCompany(offerByCompany));
+            }
+            catch(Exception ex)
+            {
+                return Problem(ex.Message, title: "Error while saving offer by company.");
+            }
         }
         [HttpPost]
         [Route("update")]
         public ActionResult<bool> UpdateOfferByCompany(OfferByCompany offerByCompany)
         {
-            bool saved = _brocker.UpdateOfferByCompany(offerByCompany);
-            if (saved)
-                return Ok(saved);
-            else
-                return Problem(saved.ToString(), title: "Error while updating offer by company.");
+            try
+            {
+                return Ok(_offerByCompanyService.UpdateOfferByCompany(offerByCompany));
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message, title: "Error while updating offer by company.");
+            }
         }
         [HttpGet]
         [Route("getOfferByCompany/:id")]
-        public ActionResult<IEnumerable<OfferByCompany>> LoadOfferByCompany(long id)
+        public ActionResult<OfferByCompany> LoadOfferByCompany(long id)
         {
-            return Ok(_brocker.LoadOfferByCompany(id));
+            return Ok(_offerByCompanyService.LoadOfferByCompany(id));
         }
     }
 }

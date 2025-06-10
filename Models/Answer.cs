@@ -12,22 +12,23 @@ namespace honey_beer_server_app.Models
     public class Answer
     {
         [Key, ForeignKey(nameof(Question)), Column("event_id")]
-        public long EventId { get; set; }
+        public long EventId { get; set; } = 0;
+
         [Key, ForeignKey(nameof(Question)), Column("question_id")]
-        public long QuestionId { get; set; }
+        public long QuestionId { get; set; } = 0;
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("answer_id")]
-        public long AnswerId { get; set; }
+        public long AnswerId { get; set; } = 0;
         [Required]
         [Column("value")]
-        public string Value { get; set; }
+        public string Value { get; set; } = "";
 
         //Notation relationships
         [NotMapped]
         [JsonIgnore]
-        public List<CustomerAnswer>? customerAnswers { get; set; }
+        public List<CustomerAnswer>? CustomerAnswers { get; set; }
 
         [JsonIgnore]
         public Question? EventQuestion { get; set; }

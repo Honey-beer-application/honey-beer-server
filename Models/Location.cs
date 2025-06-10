@@ -13,14 +13,14 @@ namespace honey_beer_server_app.Models
         public long LocationId { get; set; }
         [Required]
         [Column("location_name")]
-        public string LocationName { get; set; }
+        public string LocationName { get; set; } = string.Empty;
 
         [Required]
         [Column("phone")]
-        public string Phone { get; set; }
+        public string Phone { get; set; } = string.Empty;
 
         [Required]
         [Column("email")]
-        public string Email { get; set; }
+        public string Email { get; set; } = string.Empty;
     }
 }

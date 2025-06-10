@@ -1,8 +1,7 @@
-﻿using honey_beer_server_app.Data.DBBrocker.DBBrocker;
-using honey_beer_server_app.Models;
+﻿using honey_beer_server_app.Models;
+using honey_beer_server_app.Services.CompanyService;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace honey_beer_server_app.Controllers
 {
@@ -12,35 +11,35 @@ namespace honey_beer_server_app.Controllers
     
     public class CompanyController : ControllerBase
     {
-        private readonly IDBBrocker _brocker;
+        private readonly ICompanyService _companyService;
 
-        public CompanyController(IDBBrocker brocker) => _brocker = brocker;
+        public CompanyController(ICompanyService companyService) 
+        { 
+            _companyService = companyService;
+        }
         [HttpPost]
-        public ActionResult<Company> CreateCompany(Company company)
+        public ActionResult<bool> CreateCompany(Company company)
         {
             try
             {
-                bool created = _brocker.CreateCompany(company);
-                return Ok(created);
+                return Ok(_companyService.CreateCompany(company));
             }
             catch (Exception ex)
             {
                 return Problem(ex.Message, title: "Error while creating company");
             }
-            /*bool created = _brocker.CreateCompany(company);
-            if (created)
-                return Ok(created);
-            else
-                return Problem(created.ToString(), title: "Error while creating company");*/
         }
         [HttpDelete]
-        public ActionResult DeleteCompany(Company company)
+        public ActionResult<bool> DeleteCompany(Company company)
         {
-            bool deleted = _brocker.DeleteCompany(company);
-            if (deleted)
-                return Ok(deleted);
-            else
-                return Problem(deleted.ToString(), title: "Error while deleting company");
+            try
+            {
+                return Ok(_companyService.DeleteCompany(company));
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message, title: "Error while deleting company");
+            }
         }
     }
 }

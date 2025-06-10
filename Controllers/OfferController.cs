@@ -1,5 +1,5 @@
-﻿using honey_beer_server_app.Data.DBBrocker.DBBrocker;
-using honey_beer_server_app.Models;
+﻿using honey_beer_server_app.Models;
+using honey_beer_server_app.Services.OfferSerice;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,22 +10,25 @@ namespace honey_beer_server_app.Controllers
     [ApiController]
     public class OfferController : ControllerBase
     {
-        private IDBBrocker _brocker;
+        private readonly IOfferService _offerService;
 
-        public OfferController(IDBBrocker brocker) => _brocker = brocker;
+        public OfferController(IOfferService offerService) => _offerService = offerService;
         [HttpGet]
-        public ActionResult<IEnumerable<Offer>> GetAllOffers()
+        public ActionResult<List<Offer>> GetAllOffers()
         {
-            return Ok(_brocker.GetAllOffers());
+            return Ok(_offerService.GetAllOffers());
         }
         [HttpPost]
         public ActionResult<bool> CreateOffer(OfferByCompany offerByCompany) 
         {
-            bool created = _brocker.CreateOffer(offerByCompany);
-            if (created)
-                return Ok(created);
-            else
-                return Problem(created.ToString(),title:"Error while creating offer.");
+            try
+            {
+                return Ok(_offerService.CreateOffer(offerByCompany));
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message, title: "Error while creating offer.");
+            }
         }
     }
 }
