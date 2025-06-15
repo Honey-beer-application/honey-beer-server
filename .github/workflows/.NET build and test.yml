@@ -18,8 +18,12 @@ jobs:
     - uses: actions/checkout@v4
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
+    - name: Setup docker soonar scanner CLI
+      uses: sonarsource/sonar-scanner-cli:latest
       with:
         dotnet-version: 6.0.x
+    - name: Install dotnet sonarscanner
+      run:  dotnet tool install -g dotnet-sonarscanner
     - name: Restore dependencies or honey-beer-server-app project
       run: dotnet restore ./honey-beer-server/honey-beer-server-app.csproj
     - name: Restore dependencies or honey-beer-server-appTests project
@@ -27,4 +31,4 @@ jobs:
     - name: Build honey-beer-server-appTests
       run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
     - name: Test
-      run: sonar-scanner begin /k:"Honey-beer-application_honey-beer-server" /d:sonar.token="4af98b16125aa336a2caa34af8272cb57b8d2269" dotnet build --no-incremental dotnet test --collect "Code Coverage" SonarScanner.MSBuild.exe end /d:sonar.token="4af98b16125aa336a2caa34af8272cb57b8d2269"
+      run: dotnet sonarscanner begin /k:"Honey-beer-application_honey-beer-server" /d:sonar.token="4af98b16125aa336a2caa34af8272cb57b8d2269" dotnet build --no-incremental dotnet test --collect "Code Coverage" dotnet sonarscanner end /d:sonar.token="4af98b16125aa336a2caa34af8272cb57b8d2269"
