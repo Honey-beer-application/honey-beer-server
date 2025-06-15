@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build_and_test_asp_net_core_app:
 
     runs-on: ubuntu-latest
 
@@ -27,4 +27,4 @@ jobs:
     - name: Build honey-beer-server-appTests
       run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
     - name: Test
-      run: dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --verbosity normal
+      run: sonar-scanner begin /k:"Honey-beer-application_honey-beer-server" /d:sonar.token="4af98b16125aa336a2caa34af8272cb57b8d2269" dotnet build --no-incremental dotnet test --collect "Code Coverage" SonarScanner.MSBuild.exe end /d:sonar.token="4af98b16125aa336a2caa34af8272cb57b8d2269"
