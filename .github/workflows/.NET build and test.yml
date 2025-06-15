@@ -29,11 +29,11 @@ jobs:
     - name: Build honey-beer-server-appTests
       run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
     - name: Start test
-      run: dotnet sonarscanner begin /k:"Honey-beer-application_honey-beer-server" /d:sonar.token="${{ secrets.SONAR_TOKEN_LINUX }}" /d:sonar.host.url=https://sonarcloud.io /o:"honey-beer-application"
+      run: dotnet sonarscanner begin /k:"Honey-beer-application_honey-beer-server" /d:sonar.token="${{ secrets.SONAR_TOKEN_LINUX }}" /d:sonar.scanner.scanAll=false /d:sonar.host.url=https://sonarcloud.io /o:"honey-beer-application" /d:sonar.cs.vscoveragexml.reportsPaths=./honey-beer-server/coverage.xml
     - name: build project
       run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --no-incremental 
     - name: Execute tests
-      run:  dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --collect "Code Coverage" 
+      run:  dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj collect "dotnet test" -f xml -o "coverage.xml"
     - name: Finish scanning
       run: dotnet sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN_LINUX }}"
   # build:
