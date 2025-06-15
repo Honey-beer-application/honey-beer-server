@@ -33,7 +33,7 @@ jobs:
     - name: build project
       run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --no-incremental 
     - name: Execute tests
-      run:  dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj collect "dotnet test" -f xml -o "coverage.xml"
+      run:  dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj collect "dotnet test" -f xml -o "/home/runner/work/honey-beer-server/coverage.xml"
     - name: Finish scanning
       run: dotnet sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN_LINUX }}"
   # build:
