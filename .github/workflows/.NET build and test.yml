@@ -28,5 +28,11 @@ jobs:
       run: dotnet restore ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
     - name: Build honey-beer-server-appTests
       run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
-    - name: Test
-      run: dotnet sonarscanner begin /k:"Honey-beer-application_honey-beer-server" /d:sonar.token="4af98b16125aa336a2caa34af8272cb57b8d2269" dotnet build --no-incremental dotnet test --collect "Code Coverage" dotnet sonarscanner end /d:sonar.token="4af98b16125aa336a2caa34af8272cb57b8d2269"
+    - name: Start test
+      run: dotnet sonarscanner begin /k:"Honey-beer-application_honey-beer-server" /d:sonar.token="4af98b16125aa336a2caa34af8272cb57b8d2269" 
+    - name: build project
+      run: dotnet build --no-incremental 
+    - name: Execute tests
+      run:  dotnet test --collect "Code Coverage" 
+    - name: Finish scanning
+      run: dotnet sonarscanner end /d:sonar.token="4af98b16125aa336a2caa34af8272cb57b8d2269"
