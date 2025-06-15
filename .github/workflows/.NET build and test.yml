@@ -19,7 +19,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: 6.0.x
     - name: Restore dependencies or honey-beer-server-app project
       run: dotnet restore ./honey-beer-server/honey-beer-server-app.csproj
     - name: Restore dependencies or honey-beer-server-appTests project
@@ -27,4 +27,4 @@ jobs:
     - name: Build honey-beer-server-appTests
       run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
     - name: Test
-      run: dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --verbosity normal
+      run: dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj--verbosity normal
