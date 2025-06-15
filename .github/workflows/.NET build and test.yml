@@ -33,6 +33,6 @@ jobs:
     - name: build project
       run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --no-incremental 
     - name: Execute tests
-      run:  dotnet test --collect "Code Coverage" 
+      run:  dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --collect "Code Coverage" 
     - name: Finish scanning
       run: dotnet sonarscanner end /d:sonar.token="4af98b16125aa336a2caa34af8272cb57b8d2269"
