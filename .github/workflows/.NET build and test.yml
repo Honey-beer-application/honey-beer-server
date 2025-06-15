@@ -10,29 +10,68 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build_and_test_asp_net_core_app:
+  # build_and_test_asp_net_core_app:
 
-    runs-on: ubuntu-latest
+  #   runs-on: ubuntu-latest
 
+  #   steps:
+  #   - uses: actions/checkout@v4
+  #   - name: Setup .NET
+  #     uses: actions/setup-dotnet@v4
+  #     with:
+  #       dotnet-version: 6.0.x
+  #   - name: Install dotnet sonarscanner
+  #     run:  dotnet tool install -g dotnet-sonarscanner
+  #   - name: Restore dependencies or honey-beer-server-app project
+  #     run: dotnet restore ./honey-beer-server/honey-beer-server-app.csproj
+  #   - name: Restore dependencies or honey-beer-server-appTests project
+  #     run: dotnet restore ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
+  #   - name: Build honey-beer-server-appTests
+  #     run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
+  #   - name: Start test
+  #     run: dotnet sonarscanner begin /k:"Honey-beer-application_honey-beer-server" /d:sonar.token="4af98b16125aa336a2caa34af8272cb57b8d2269" /d:sonar.host.url=https://sonarcloud.io /o:"honey-beer-application"
+  #   - name: build project
+  #     run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --no-incremental 
+  #   - name: Execute tests
+  #     run:  dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --collect "Code Coverage" 
+  #   - name: Finish scanning
+  #     run: dotnet sonarscanner end /d:sonar.token="4af98b16125aa336a2caa34af8272cb57b8d2269"
+  build:
+    name: Build and analyze
+    runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 6.0.x
-    - name: Install dotnet sonarscanner
-      run:  dotnet tool install -g dotnet-sonarscanner
-    - name: Restore dependencies or honey-beer-server-app project
-      run: dotnet restore ./honey-beer-server/honey-beer-server-app.csproj
-    - name: Restore dependencies or honey-beer-server-appTests project
-      run: dotnet restore ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
-    - name: Build honey-beer-server-appTests
-      run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
-    - name: Start test
-      run: dotnet sonarscanner begin /k:"Honey-beer-application_honey-beer-server" /d:sonar.token="4af98b16125aa336a2caa34af8272cb57b8d2269" /d:sonar.host.url=https://sonarcloud.io /o:"honey-beer-application"
-    - name: build project
-      run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --no-incremental 
-    - name: Execute tests
-      run:  dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --collect "Code Coverage" 
-    - name: Finish scanning
-      run: dotnet sonarscanner end /d:sonar.token="4af98b16125aa336a2caa34af8272cb57b8d2269"
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: 'zulu' # Alternative distribution options are available.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: Cache SonarQube Cloud packages
+        uses: actions/cache@v4
+        with:
+          path: ~\sonar\cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+      - name: Cache SonarQube Cloud scanner
+        id: cache-sonar-scanner
+        uses: actions/cache@v4
+        with:
+          path: .\.sonar\scanner
+          key: ${{ runner.os }}-sonar-scanner
+          restore-keys: ${{ runner.os }}-sonar-scanner
+      - name: Install SonarQube Cloud scanner
+        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
+        shell: powershell
+        run: |
+          New-Item -Path .\.sonar\scanner -ItemType Directory
+          dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
+      - name: Build and analyze
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        shell: powershell
+        run: |
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"Honey-beer-application_honey-beer-server" /o:"honey-beer-application" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
