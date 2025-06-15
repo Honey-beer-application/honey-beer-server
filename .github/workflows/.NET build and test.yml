@@ -23,7 +23,7 @@ jobs:
     - name: Install dotnet sonarscanner
       run:  dotnet tool install -g dotnet-sonarscanner
     - name: install dotnet coverage
-      run:  dotnet tool install --global dotnet-coverage
+      run:  dotnet tool install --global dotnet-coverage --version 17.12.6
     - name: Restore dependencies or honey-beer-server-app project
       run: dotnet restore ./honey-beer-server/honey-beer-server-app.csproj
     - name: Restore dependencies or honey-beer-server-appTests project
