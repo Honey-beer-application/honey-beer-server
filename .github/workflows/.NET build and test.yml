@@ -73,5 +73,6 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"Honey-beer-application_honey-beer-server" /o:"honey-beer-application" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
+          dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj 
+          dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --collect "Code Coverage"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
