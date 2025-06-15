@@ -27,4 +27,4 @@ jobs:
     - name: Build honey-beer-server-appTests
       run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
     - name: Test
-      run: dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj--verbosity normal
+      run: dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --verbosity normal
