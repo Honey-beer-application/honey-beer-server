@@ -20,9 +20,11 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
+    - name: Restore dependencies or honey-beer-server-app project
+      run: dotnet restore ./honey-beer-server/honey-beer-server-app.csproj
+    - name: Restore dependencies or honey-beer-server-appTests project
+      run: dotnet restore ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
+    - name: Build honey-beer-server-appTests
+      run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --no-build --verbosity normal
