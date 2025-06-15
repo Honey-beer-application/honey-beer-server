@@ -1,6 +1,0 @@
-projectKey=honey-beer-backend
-serverUrl=http://localhost:9000
-serverVersion=25.5.0.107428
-dashboardUrl=http://localhost:9000/dashboard?id=honey-beer-backend
-ceTaskId=5ea79239-5451-44e1-a48b-c01bb049570d
-ceTaskUrl=http://localhost:9000/api/ce/task?id=5ea79239-5451-44e1-a48b-c01bb049570d

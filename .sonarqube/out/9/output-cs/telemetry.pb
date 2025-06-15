@@ -1,1 +1,0 @@
-kRUD:\FON\master\Aplikacija\honey-beer-server-appTests\honey-beer-server-appTests.csproj¢net6.0òCSharp10

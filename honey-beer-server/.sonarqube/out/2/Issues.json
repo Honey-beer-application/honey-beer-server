@@ -1,0 +1,5200 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.14.0.0",
+        "fileVersion": "4.14.0-3.25218.8 (d7bde97e)",
+        "semanticVersion": "4.14.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Event' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 29,
+                  "endLine": 27,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Answer' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 30,
+                  "endLine": 28,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Company' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 31,
+                  "endLine": 29,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'CustomerAnswer' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 38,
+                  "endLine": 30,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Customer' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 32,
+                  "endLine": 31,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Discount' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 32,
+                  "endLine": 32,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'EventType' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 33,
+                  "endLine": 33,
+                  "endColumn": 42
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Form' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 28,
+                  "endLine": 34,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Location' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 32,
+                  "endLine": 35,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'OfferByCompany' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 38,
+                  "endLine": 36,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Offer' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 37,
+                  "startColumn": 29,
+                  "endLine": 37,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Product' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 38,
+                  "startColumn": 31,
+                  "endLine": 38,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'QRCode' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 39,
+                  "startColumn": 30,
+                  "endLine": 39,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Question' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 32,
+                  "endLine": 40,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'QuestionType' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 36,
+                  "endLine": 41,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Reservation' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 35,
+                  "endLine": 42,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'ShoppingLocation' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 40,
+                  "endLine": 43,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'TextCustomerAnswer' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 42,
+                  "endLine": 44,
+                  "endColumn": 60
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Meeting' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 31,
+                  "endLine": 45,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'SentCompanyEmail' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 46,
+                  "startColumn": 40,
+                  "endLine": 46,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'EventLocation' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 37,
+                  "endLine": 47,
+                  "endColumn": 50
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'PersonalEmail' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 37,
+                  "endLine": 48,
+                  "endColumn": 50
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'SentPersonalEmail' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 41,
+                  "endLine": 49,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'ProductInLocation' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 41,
+                  "endLine": 50,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'ScannedByCustomer' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 41,
+                  "endLine": 51,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'QRCodeType' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/DBContext/DBContext.cs",
+                "region": {
+                  "startLine": 52,
+                  "startColumn": 34,
+                  "endLine": 52,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8625",
+          "level": "warning",
+          "message": "Cannot convert null literal to non-nullable reference type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/FormRepository.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 53,
+                  "endLine": 28,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8625",
+          "level": "warning",
+          "message": "Cannot convert null literal to non-nullable reference type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/FormRepository.cs",
+                "region": {
+                  "startLine": 69,
+                  "startColumn": 77,
+                  "endLine": 69,
+                  "endColumn": 81
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Program.cs",
+                "region": {
+                  "startLine": 86,
+                  "startColumn": 22,
+                  "endLine": 86,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'company' 8 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 23,
+                  "endLine": 15,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 134,
+                  "startColumn": 41,
+                  "endLine": 134,
+                  "endColumn": 50
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 154,
+                  "startColumn": 41,
+                  "endLine": 154,
+                  "endColumn": 50
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 174,
+                  "startColumn": 41,
+                  "endLine": 174,
+                  "endColumn": 50
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 283,
+                  "startColumn": 41,
+                  "endLine": 283,
+                  "endColumn": 50
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 383,
+                  "startColumn": 41,
+                  "endLine": 383,
+                  "endColumn": 50
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 480,
+                  "startColumn": 24,
+                  "endLine": 480,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 584,
+                  "startColumn": 23,
+                  "endLine": 584,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null,
+              "6": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'bigint' 50 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 52,
+                  "endLine": 18,
+                  "endColumn": 60
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 57,
+                  "endLine": 32,
+                  "endColumn": 65
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 62,
+                  "endLine": 45,
+                  "endColumn": 70
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 60,
+                  "endLine": 58,
+                  "endColumn": 68
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 82,
+                  "startColumn": 59,
+                  "endLine": 82,
+                  "endColumn": 67
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 96,
+                  "startColumn": 59,
+                  "endLine": 96,
+                  "endColumn": 67
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 110,
+                  "startColumn": 65,
+                  "endLine": 110,
+                  "endColumn": 73
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 123,
+                  "startColumn": 52,
+                  "endLine": 123,
+                  "endColumn": 60
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 124,
+                  "startColumn": 59,
+                  "endLine": 124,
+                  "endColumn": 67
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 143,
+                  "startColumn": 52,
+                  "endLine": 143,
+                  "endColumn": 60
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 144,
+                  "startColumn": 70,
+                  "endLine": 144,
+                  "endColumn": 78
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 163,
+                  "startColumn": 52,
+                  "endLine": 163,
+                  "endColumn": 60
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 164,
+                  "startColumn": 69,
+                  "endLine": 164,
+                  "endColumn": 77
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 183,
+                  "startColumn": 57,
+                  "endLine": 183,
+                  "endColumn": 65
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 190,
+                  "startColumn": 62,
+                  "endLine": 190,
+                  "endColumn": 70
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 207,
+                  "startColumn": 60,
+                  "endLine": 207,
+                  "endColumn": 68
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 229,
+                  "startColumn": 71,
+                  "endLine": 229,
+                  "endColumn": 79
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 248,
+                  "startColumn": 59,
+                  "endLine": 248,
+                  "endColumn": 67
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 249,
+                  "startColumn": 57,
+                  "endLine": 249,
+                  "endColumn": 65
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 270,
+                  "startColumn": 63,
+                  "endLine": 270,
+                  "endColumn": 71
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 272,
+                  "startColumn": 59,
+                  "endLine": 272,
+                  "endColumn": 67
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 273,
+                  "startColumn": 52,
+                  "endLine": 273,
+                  "endColumn": 60
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 298,
+                  "startColumn": 56,
+                  "endLine": 298,
+                  "endColumn": 64
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 301,
+                  "startColumn": 57,
+                  "endLine": 301,
+                  "endColumn": 65
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 302,
+                  "startColumn": 59,
+                  "endLine": 302,
+                  "endColumn": 67
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 318,
+                  "startColumn": 52,
+                  "endLine": 318,
+                  "endColumn": 60
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 319,
+                  "startColumn": 69,
+                  "endLine": 319,
+                  "endColumn": 77
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 320,
+                  "startColumn": 59,
+                  "endLine": 320,
+                  "endColumn": 67
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 346,
+                  "startColumn": 57,
+                  "endLine": 346,
+                  "endColumn": 65
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 347,
+                  "startColumn": 60,
+                  "endLine": 347,
+                  "endColumn": 68
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 350,
+                  "startColumn": 65,
+                  "endLine": 350,
+                  "endColumn": 73
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 373,
+                  "startColumn": 52,
+                  "endLine": 373,
+                  "endColumn": 60
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 374,
+                  "startColumn": 59,
+                  "endLine": 374,
+                  "endColumn": 67
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 375,
+                  "startColumn": 57,
+                  "endLine": 375,
+                  "endColumn": 65
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 398,
+                  "startColumn": 57,
+                  "endLine": 398,
+                  "endColumn": 65
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 399,
+                  "startColumn": 60,
+                  "endLine": 399,
+                  "endColumn": 68
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 400,
+                  "startColumn": 58,
+                  "endLine": 400,
+                  "endColumn": 66
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 419,
+                  "startColumn": 57,
+                  "endLine": 419,
+                  "endColumn": 65
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 420,
+                  "startColumn": 60,
+                  "endLine": 420,
+                  "endColumn": 68
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 421,
+                  "startColumn": 58,
+                  "endLine": 421,
+                  "endColumn": 66
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 422,
+                  "startColumn": 56,
+                  "endLine": 422,
+                  "endColumn": 64
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 424,
+                  "startColumn": 60,
+                  "endLine": 424,
+                  "endColumn": 68
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 452,
+                  "startColumn": 57,
+                  "endLine": 452,
+                  "endColumn": 65
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 453,
+                  "startColumn": 60,
+                  "endLine": 453,
+                  "endColumn": 68
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 454,
+                  "startColumn": 58,
+                  "endLine": 454,
+                  "endColumn": 66
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 455,
+                  "startColumn": 56,
+                  "endLine": 455,
+                  "endColumn": 64
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 457,
+                  "startColumn": 78,
+                  "endLine": 457,
+                  "endColumn": 86
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 458,
+                  "startColumn": 81,
+                  "endLine": 458,
+                  "endColumn": 89
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 459,
+                  "startColumn": 79,
+                  "endLine": 459,
+                  "endColumn": 87
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 460,
+                  "startColumn": 77,
+                  "endLine": 460,
+                  "endColumn": 85
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "10": null,
+              "11": null,
+              "12": null,
+              "13": null,
+              "14": null,
+              "15": null,
+              "16": null,
+              "17": null,
+              "18": null,
+              "19": null,
+              "2": null,
+              "20": null,
+              "21": null,
+              "22": null,
+              "23": null,
+              "24": null,
+              "25": null,
+              "26": null,
+              "27": null,
+              "28": null,
+              "29": null,
+              "3": null,
+              "30": null,
+              "31": null,
+              "32": null,
+              "33": null,
+              "34": null,
+              "35": null,
+              "36": null,
+              "37": null,
+              "38": null,
+              "39": null,
+              "4": null,
+              "40": null,
+              "41": null,
+              "42": null,
+              "43": null,
+              "44": null,
+              "45": null,
+              "46": null,
+              "47": null,
+              "48": null,
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null,
+              "9": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'nvarchar(max)' 18 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 55,
+                  "endLine": 19,
+                  "endColumn": 70
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 56,
+                  "endLine": 20,
+                  "endColumn": 71
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 59,
+                  "endLine": 21,
+                  "endColumn": 74
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 59,
+                  "endLine": 34,
+                  "endColumn": 74
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 55,
+                  "endLine": 47,
+                  "endColumn": 70
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 60,
+                  "startColumn": 64,
+                  "endLine": 60,
+                  "endColumn": 79
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 84,
+                  "startColumn": 55,
+                  "endLine": 84,
+                  "endColumn": 70
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 85,
+                  "startColumn": 62,
+                  "endLine": 85,
+                  "endColumn": 77
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 98,
+                  "startColumn": 55,
+                  "endLine": 98,
+                  "endColumn": 70
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 55,
+                  "endLine": 112,
+                  "endColumn": 70
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 166,
+                  "startColumn": 59,
+                  "endLine": 166,
+                  "endColumn": 74
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 185,
+                  "startColumn": 56,
+                  "endLine": 185,
+                  "endColumn": 71
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 186,
+                  "startColumn": 62,
+                  "endLine": 186,
+                  "endColumn": 77
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 209,
+                  "startColumn": 59,
+                  "endLine": 209,
+                  "endColumn": 74
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 210,
+                  "startColumn": 59,
+                  "endLine": 210,
+                  "endColumn": 74
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 349,
+                  "startColumn": 55,
+                  "endLine": 349,
+                  "endColumn": 70
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 402,
+                  "startColumn": 56,
+                  "endLine": 402,
+                  "endColumn": 71
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 456,
+                  "startColumn": 55,
+                  "endLine": 456,
+                  "endColumn": 70
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "10": null,
+              "11": null,
+              "12": null,
+              "13": null,
+              "14": null,
+              "15": null,
+              "16": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null,
+              "9": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'SqlServer:Identity' 17 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 37,
+                  "endLine": 33,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 46,
+                  "startColumn": 37,
+                  "endLine": 46,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 59,
+                  "startColumn": 37,
+                  "endLine": 59,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 37,
+                  "endLine": 83,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 97,
+                  "startColumn": 37,
+                  "endLine": 97,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 111,
+                  "startColumn": 37,
+                  "endLine": 111,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 125,
+                  "startColumn": 37,
+                  "endLine": 125,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 145,
+                  "startColumn": 37,
+                  "endLine": 145,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 165,
+                  "startColumn": 37,
+                  "endLine": 165,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 184,
+                  "startColumn": 37,
+                  "endLine": 184,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 208,
+                  "startColumn": 37,
+                  "endLine": 208,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 230,
+                  "startColumn": 37,
+                  "endLine": 230,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 250,
+                  "startColumn": 37,
+                  "endLine": 250,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 271,
+                  "startColumn": 37,
+                  "endLine": 271,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 299,
+                  "startColumn": 37,
+                  "endLine": 299,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 348,
+                  "startColumn": 37,
+                  "endLine": 348,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 401,
+                  "startColumn": 37,
+                  "endLine": 401,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "10": null,
+              "11": null,
+              "12": null,
+              "13": null,
+              "14": null,
+              "15": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null,
+              "9": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'personal_email' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 23,
+                  "endLine": 68,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 219,
+                  "startColumn": 41,
+                  "endLine": 219,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 239,
+                  "startColumn": 41,
+                  "endLine": 239,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 602,
+                  "startColumn": 23,
+                  "endLine": 602,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'product' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 23,
+                  "endLine": 79,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 261,
+                  "startColumn": 41,
+                  "endLine": 261,
+                  "endColumn": 50
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 289,
+                  "startColumn": 41,
+                  "endLine": 289,
+                  "endColumn": 50
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 331,
+                  "startColumn": 41,
+                  "endLine": 331,
+                  "endColumn": 50
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 587,
+                  "startColumn": 23,
+                  "endLine": 587,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'datetime2' 13 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 126,
+                  "startColumn": 66,
+                  "endLine": 126,
+                  "endColumn": 77
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 146,
+                  "startColumn": 66,
+                  "endLine": 146,
+                  "endColumn": 77
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 187,
+                  "startColumn": 66,
+                  "endLine": 187,
+                  "endColumn": 77
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 188,
+                  "startColumn": 63,
+                  "endLine": 188,
+                  "endColumn": 74
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 189,
+                  "startColumn": 61,
+                  "endLine": 189,
+                  "endColumn": 72
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 231,
+                  "startColumn": 66,
+                  "endLine": 231,
+                  "endColumn": 77
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 252,
+                  "startColumn": 63,
+                  "endLine": 252,
+                  "endColumn": 74
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 253,
+                  "startColumn": 61,
+                  "endLine": 253,
+                  "endColumn": 72
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 275,
+                  "startColumn": 61,
+                  "endLine": 275,
+                  "endColumn": 72
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 300,
+                  "startColumn": 66,
+                  "endLine": 300,
+                  "endColumn": 77
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 322,
+                  "startColumn": 63,
+                  "endLine": 322,
+                  "endColumn": 74
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 323,
+                  "startColumn": 61,
+                  "endLine": 323,
+                  "endColumn": 72
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 423,
+                  "startColumn": 57,
+                  "endLine": 423,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "10": null,
+              "11": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null,
+              "9": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'event' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 180,
+                  "startColumn": 23,
+                  "endLine": 180,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 358,
+                  "startColumn": 41,
+                  "endLine": 358,
+                  "endColumn": 48
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 510,
+                  "startColumn": 24,
+                  "endLine": 510,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 608,
+                  "startColumn": 23,
+                  "endLine": 608,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'customer' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 204,
+                  "startColumn": 23,
+                  "endLine": 204,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 438,
+                  "startColumn": 41,
+                  "endLine": 438,
+                  "endColumn": 51
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 485,
+                  "startColumn": 24,
+                  "endLine": 485,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 490,
+                  "startColumn": 24,
+                  "endLine": 490,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 593,
+                  "startColumn": 23,
+                  "endLine": 593,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'product_id' 7 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 262,
+                  "startColumn": 42,
+                  "endLine": 262,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 290,
+                  "startColumn": 42,
+                  "endLine": 290,
+                  "endColumn": 54
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 332,
+                  "startColumn": 42,
+                  "endLine": 332,
+                  "endColumn": 54
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 390,
+                  "startColumn": 51,
+                  "endLine": 390,
+                  "endColumn": 63
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 506,
+                  "startColumn": 25,
+                  "endLine": 506,
+                  "endColumn": 37
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 521,
+                  "startColumn": 34,
+                  "endLine": 521,
+                  "endColumn": 46
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 536,
+                  "startColumn": 25,
+                  "endLine": 536,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'reservation' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 267,
+                  "startColumn": 23,
+                  "endLine": 267,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 530,
+                  "startColumn": 24,
+                  "endLine": 530,
+                  "endColumn": 37
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 535,
+                  "startColumn": 24,
+                  "endLine": 535,
+                  "endColumn": 37
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 563,
+                  "startColumn": 23,
+                  "endLine": 563,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'question' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 343,
+                  "startColumn": 23,
+                  "endLine": 343,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 410,
+                  "startColumn": 41,
+                  "endLine": 410,
+                  "endColumn": 51
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 525,
+                  "startColumn": 24,
+                  "endLine": 525,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 599,
+                  "startColumn": 23,
+                  "endLine": 599,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'event_id' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 359,
+                  "startColumn": 42,
+                  "endLine": 359,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 411,
+                  "startColumn": 51,
+                  "endLine": 411,
+                  "endColumn": 61
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 51,
+                  "endLine": 433,
+                  "endColumn": 61
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 469,
+                  "startColumn": 51,
+                  "endLine": 469,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'answer' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 395,
+                  "startColumn": 23,
+                  "endLine": 395,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 432,
+                  "startColumn": 41,
+                  "endLine": 432,
+                  "endColumn": 49
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 475,
+                  "startColumn": 24,
+                  "endLine": 475,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 590,
+                  "startColumn": 23,
+                  "endLine": 590,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'customer_answer' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 416,
+                  "startColumn": 23,
+                  "endLine": 416,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 468,
+                  "startColumn": 41,
+                  "endLine": 468,
+                  "endColumn": 58
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 495,
+                  "startColumn": 24,
+                  "endLine": 495,
+                  "endColumn": 41
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 500,
+                  "startColumn": 24,
+                  "endLine": 500,
+                  "endColumn": 41
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230729132310_CreatingClasses.cs",
+                "region": {
+                  "startLine": 581,
+                  "startColumn": 23,
+                  "endLine": 581,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'location' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730011203_ChangingLocationTable.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 24,
+                  "endLine": 15,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730011203_ChangingLocationTable.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 24,
+                  "endLine": 22,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730011203_ChangingLocationTable.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 24,
+                  "endLine": 33,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730011203_ChangingLocationTable.cs",
+                "region": {
+                  "startLine": 37,
+                  "startColumn": 24,
+                  "endLine": 37,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'qr_code' 12 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 24,
+                  "endLine": 15,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 24,
+                  "endLine": 19,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 24,
+                  "endLine": 27,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 24,
+                  "endLine": 47,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 53,
+                  "startColumn": 24,
+                  "endLine": 53,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 64,
+                  "startColumn": 24,
+                  "endLine": 64,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 76,
+                  "startColumn": 24,
+                  "endLine": 76,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 24,
+                  "endLine": 83,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 87,
+                  "startColumn": 24,
+                  "endLine": 87,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 91,
+                  "startColumn": 24,
+                  "endLine": 91,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 95,
+                  "startColumn": 24,
+                  "endLine": 95,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 103,
+                  "startColumn": 24,
+                  "endLine": 103,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "10": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null,
+              "9": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'qr_code_type_id' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 23,
+                  "endLine": 26,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 25,
+                  "endLine": 54,
+                  "endColumn": 42
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 65,
+                  "startColumn": 25,
+                  "endLine": 65,
+                  "endColumn": 42
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 34,
+                  "endLine": 67,
+                  "endColumn": 51
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 90,
+                  "startColumn": 23,
+                  "endLine": 90,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'qr_code_type' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 23,
+                  "endLine": 33,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 24,
+                  "endLine": 58,
+                  "endColumn": 38
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 66,
+                  "startColumn": 33,
+                  "endLine": 66,
+                  "endColumn": 47
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730144228_AddingScannedByTableAndQRCodeTypeTable.cs",
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 23,
+                  "endLine": 79,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'scanned_by' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730150650_AddingScannedByTable.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 23,
+                  "endLine": 14,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730150650_AddingScannedByTable.cs",
+                "region": {
+                  "startLine": 39,
+                  "startColumn": 24,
+                  "endLine": 39,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730150650_AddingScannedByTable.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 24,
+                  "endLine": 45,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230730150650_AddingScannedByTable.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 23,
+                  "endLine": 54,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'IX_scanned_by_qr_code_id' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 23,
+                  "endLine": 14,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 23,
+                  "endLine": 22,
+                  "endColumn": 49
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 23,
+                  "endLine": 42,
+                  "endColumn": 49
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 23,
+                  "endLine": 54,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'scanned_by' 10 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 24,
+                  "endLine": 15,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 24,
+                  "endLine": 19,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 24,
+                  "endLine": 23,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 24,
+                  "endLine": 28,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 24,
+                  "endLine": 34,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 24,
+                  "endLine": 43,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 24,
+                  "endLine": 47,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 24,
+                  "endLine": 51,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 24,
+                  "endLine": 55,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 61,
+                  "startColumn": 24,
+                  "endLine": 61,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'IX_scanned_by_sutomer_id' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 23,
+                  "endLine": 18,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 23,
+                  "endLine": 33,
+                  "endColumn": 49
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 23,
+                  "endLine": 50,
+                  "endColumn": 49
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203317_ChangingCompositeKeyInScannedByCustomerTable.cs",
+                "region": {
+                  "startLine": 60,
+                  "startColumn": 23,
+                  "endLine": 60,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'IX_scanned_by_qr_code_id' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 23,
+                  "endLine": 14,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 23,
+                  "endLine": 26,
+                  "endColumn": 49
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 23,
+                  "endLine": 42,
+                  "endColumn": 49
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 23,
+                  "endLine": 50,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'scanned_by' 10 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 24,
+                  "endLine": 15,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 24,
+                  "endLine": 19,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 24,
+                  "endLine": 23,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 24,
+                  "endLine": 27,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 24,
+                  "endLine": 33,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 24,
+                  "endLine": 43,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 24,
+                  "endLine": 47,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 24,
+                  "endLine": 51,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 56,
+                  "startColumn": 24,
+                  "endLine": 56,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 62,
+                  "startColumn": 24,
+                  "endLine": 62,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'IX_scanned_by_sutomer_id' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 23,
+                  "endLine": 22,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 23,
+                  "endLine": 32,
+                  "endColumn": 49
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 46,
+                  "startColumn": 23,
+                  "endLine": 46,
+                  "endColumn": 49
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802203854_removingIndexInCreatedByTable.cs",
+                "region": {
+                  "startLine": 61,
+                  "startColumn": 23,
+                  "endLine": 61,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'IX_scanned_by_sutomer_id' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802204305_FixingIndexInScannedByTable.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 23,
+                  "endLine": 14,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802204305_FixingIndexInScannedByTable.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 23,
+                  "endLine": 18,
+                  "endColumn": 49
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802204305_FixingIndexInScannedByTable.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 23,
+                  "endLine": 27,
+                  "endColumn": 49
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802204305_FixingIndexInScannedByTable.cs",
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 23,
+                  "endLine": 31,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'scanned_by' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802204305_FixingIndexInScannedByTable.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 24,
+                  "endLine": 15,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802204305_FixingIndexInScannedByTable.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 24,
+                  "endLine": 19,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802204305_FixingIndexInScannedByTable.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 24,
+                  "endLine": 28,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230802204305_FixingIndexInScannedByTable.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 24,
+                  "endLine": 32,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'text_customer_answer' 12 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 24,
+                  "endLine": 15,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 24,
+                  "endLine": 19,
+                  "endColumn": 46
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 24,
+                  "endLine": 23,
+                  "endColumn": 46
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 24,
+                  "endLine": 27,
+                  "endColumn": 46
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 24,
+                  "endLine": 31,
+                  "endColumn": 46
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 24,
+                  "endLine": 35,
+                  "endColumn": 46
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 24,
+                  "endLine": 43,
+                  "endColumn": 46
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 24,
+                  "endLine": 50,
+                  "endColumn": 46
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 57,
+                  "startColumn": 24,
+                  "endLine": 57,
+                  "endColumn": 46
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 64,
+                  "startColumn": 24,
+                  "endLine": 64,
+                  "endColumn": 46
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 71,
+                  "startColumn": 24,
+                  "endLine": 71,
+                  "endColumn": 46
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 76,
+                  "startColumn": 24,
+                  "endLine": 76,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "10": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null,
+              "9": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'CustomerAnswerInstanceAnswerId' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 23,
+                  "endLine": 22,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 23,
+                  "endLine": 42,
+                  "endColumn": 55
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 72,
+                  "startColumn": 103,
+                  "endLine": 72,
+                  "endColumn": 135
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 103,
+                  "endLine": 77,
+                  "endColumn": 135
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'CustomerAnswerInstanceEventId' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 23,
+                  "endLine": 26,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 23,
+                  "endLine": 49,
+                  "endColumn": 54
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 72,
+                  "startColumn": 34,
+                  "endLine": 72,
+                  "endColumn": 65
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 34,
+                  "endLine": 77,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'CustomerAnswerInstanceFormId' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 23,
+                  "endLine": 30,
+                  "endColumn": 53
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 56,
+                  "startColumn": 23,
+                  "endLine": 56,
+                  "endColumn": 53
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 72,
+                  "startColumn": 137,
+                  "endLine": 72,
+                  "endColumn": 167
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 137,
+                  "endLine": 77,
+                  "endColumn": 167
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'CustomerAnswerInstanceQuestionId' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 23,
+                  "endLine": 34,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 63,
+                  "startColumn": 23,
+                  "endLine": 63,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 72,
+                  "startColumn": 67,
+                  "endLine": 72,
+                  "endColumn": 101
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 67,
+                  "endLine": 77,
+                  "endColumn": 101
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'bigint' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 23,
+                  "endLine": 44,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 23,
+                  "endLine": 51,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 23,
+                  "endLine": 58,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230807163147_RemovingColumnsInTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 65,
+                  "startColumn": 23,
+                  "endLine": 65,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'bigint' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923173610_RemovingTextCutomerAnswerTable.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 57,
+                  "endLine": 24,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923173610_RemovingTextCutomerAnswerTable.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 60,
+                  "endLine": 25,
+                  "endColumn": 68
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923173610_RemovingTextCutomerAnswerTable.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 58,
+                  "endLine": 26,
+                  "endColumn": 66
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923173610_RemovingTextCutomerAnswerTable.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 56,
+                  "endLine": 27,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'bigint' 8 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923180559_DroppingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 57,
+                  "endLine": 24,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923180559_DroppingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 60,
+                  "endLine": 25,
+                  "endColumn": 68
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923180559_DroppingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 58,
+                  "endLine": 26,
+                  "endColumn": 66
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923180559_DroppingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 56,
+                  "endLine": 27,
+                  "endColumn": 64
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923180559_DroppingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 78,
+                  "endLine": 28,
+                  "endColumn": 86
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923180559_DroppingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 81,
+                  "endLine": 29,
+                  "endColumn": 89
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923180559_DroppingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 79,
+                  "endLine": 30,
+                  "endColumn": 87
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923180559_DroppingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 77,
+                  "endLine": 31,
+                  "endColumn": 85
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null,
+              "6": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'bigint' 8 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923174643_CreatingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 57,
+                  "endLine": 17,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923174643_CreatingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 60,
+                  "endLine": 18,
+                  "endColumn": 68
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923174643_CreatingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 58,
+                  "endLine": 19,
+                  "endColumn": 66
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923174643_CreatingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 56,
+                  "endLine": 20,
+                  "endColumn": 64
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923174643_CreatingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 78,
+                  "endLine": 22,
+                  "endColumn": 86
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923174643_CreatingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 81,
+                  "endLine": 23,
+                  "endColumn": 89
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923174643_CreatingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 79,
+                  "endLine": 24,
+                  "endColumn": 87
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923174643_CreatingTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 77,
+                  "endLine": 25,
+                  "endColumn": 85
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null,
+              "6": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'bigint' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923183549_CreatingFixedTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 57,
+                  "endLine": 17,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923183549_CreatingFixedTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 60,
+                  "endLine": 18,
+                  "endColumn": 68
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923183549_CreatingFixedTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 58,
+                  "endLine": 19,
+                  "endColumn": 66
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Migrations/20230923183549_CreatingFixedTextCustomerAnswerTable.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 56,
+                  "endLine": 20,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S3993",
+          "level": "warning",
+          "message": "Specify AttributeUsage on 'OfferEndDateValidationAttribute'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Models/Validation/OfferEndDateValidationAttribute.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 18,
+                  "endLine": 5,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3993",
+          "level": "warning",
+          "message": "Specify AttributeUsage on 'MeetingValidationAttribute'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Models/Validation/MeetingValidationAttribute.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 18,
+                  "endLine": 5,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Models/Product.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 21,
+                  "endLine": 15,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.Exception' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Repositories/CompanyRepository.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 23,
+                  "endLine": 19,
+                  "endColumn": 74
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6444",
+          "level": "warning",
+          "message": "Pass a timeout to limit the execution time.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Models/SentPersonalEmail.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 33,
+                  "endLine": 27,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Models/EventType.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 21,
+                  "endLine": 13,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6966",
+          "level": "warning",
+          "message": "Await RunAsync instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FON/master/Aplikacija/honey-beer-server/Program.cs",
+                "region": {
+                  "startLine": 84,
+                  "startColumn": 1,
+                  "endLine": 84,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8625": {
+          "id": "CS8625",
+          "shortDescription": "Cannot convert null literal to non-nullable reference type.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8625)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S1118": {
+          "id": "S1118",
+          "shortDescription": "Utility classes should not have public constructors",
+          "fullDescription": "Whenever there are portions of code that are duplicated and do not depend on the state of their container class, they can be centralized inside a \"utility class\". A utility class is a class that only has static members, hence it should not be instantiated.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1118",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S112": {
+          "id": "S112",
+          "shortDescription": "General or reserved exceptions should never be thrown",
+          "fullDescription": "This rule raises an issue when a general or reserved exception is thrown.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-112",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1192": {
+          "id": "S1192",
+          "shortDescription": "String literals should not be duplicated",
+          "fullDescription": "Duplicated string literals make the process of refactoring complex and error-prone, as any change would need to be propagated on all occurrences.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1192",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3993": {
+          "id": "S3993",
+          "shortDescription": "Custom attributes should be marked with \"System.AttributeUsageAttribute\"",
+          "fullDescription": "When defining custom attributes, AttributeUsageAttribute must be used to indicate where the attribute can be applied. This will:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3993",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6444": {
+          "id": "S6444",
+          "shortDescription": "Not specifying a timeout for regular expressions is security-sensitive",
+          "fullDescription": "Not specifying a timeout for regular expressions can lead to a Denial-of-Service attack. Pass a timeout when using System.Text.RegularExpressions to process untrusted input because a malicious user might craft a value for which the evaluation lasts excessively long.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6444",
+          "properties": {
+            "category": "Major Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6964": {
+          "id": "S6964",
+          "shortDescription": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "fullDescription": "\"Under-posting\" refers to a situation where a client sends less data than expected to the server during an HTTP request, for example when the client omits some properties from the request body that the server expects to receive.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6964",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6966": {
+          "id": "S6966",
+          "shortDescription": "Awaitable method should be used",
+          "fullDescription": "In an async method, any blocking operations should be avoided.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6966",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

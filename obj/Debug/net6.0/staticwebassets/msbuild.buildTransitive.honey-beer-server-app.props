@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\honey-beer-server-app.props" />
-</Project>
