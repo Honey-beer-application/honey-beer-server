@@ -25,6 +25,6 @@ jobs:
     - name: Restore dependencies or honey-beer-server-appTests project
       run: dotnet restore ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
     - name: Build honey-beer-server-appTests
-      run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --no-restore
+      run: dotnet build ./honey-beer-server-appTests/honey-beer-server-appTests.csproj
     - name: Test
-      run: dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --no-build --verbosity normal
+      run: dotnet test ./honey-beer-server-appTests/honey-beer-server-appTests.csproj --verbosity normal
