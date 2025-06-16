@@ -33,6 +33,61 @@ public class OfferByCompanyControllerAPITests
         Assert.NotNull(result);
     }
 
+    [Fact]
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    //PERFECT EXAMPLE
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    public async Task LoadOfferByCompanyAPITest()
+    {
+        HttpClient client = application.CreateClient();
+        var scope = application.Services.CreateScope();
+        DBContext context = scope.ServiceProvider.GetRequiredService<DBContext>();
+        Company company = new Company()
+        {
+            PIB = 10000022,
+            Name = "Company22",
+            Email = "company22@gmail.com",
+            Password = "company22",
+        };
+        await context.Company.AddAsync(company);
+        await context.SaveChangesAsync();
+
+        Product product = new Product()
+        {
+            Description = "Product wow description",
+            Name = "Nice product wow"
+        };
+
+        await context.Product.AddAsync(product);
+        await context.SaveChangesAsync();
+
+        Offer offer = new()
+        {
+            OfferId = 0,
+            Amount = 10,
+            BeginDate = DateTime.Now.AddDays(-2),
+            EndDate = DateTime.Now.AddDays(+3),
+            ProductId = product.ProductId
+
+        };
+
+        OfferByCompany example = new()
+        {
+            PIB = company.PIB,
+            OfferId = offer.OfferId,
+            OfferInstance = offer,
+            ProductId = product.ProductId
+        };
+        HttpResponseMessage response = (await client.PostAsJsonAsync<OfferByCompany>("/api/OfferByCompany/save", example));
+        response.EnsureSuccessStatusCode();
+        HttpResponseMessage response1 = (await client.GetAsync($"/api/OfferByCompany/getOfferByCompany/:id?id={1}"));
+        string message = await response1.Content.ReadAsStringAsync();
+        response1.EnsureSuccessStatusCode();
+        OfferByCompany? result = await response1.Content.ReadFromJsonAsync<OfferByCompany>();
+        Assert.NotNull(result);
+
+    }
+
     //[TestMethod]
     [Fact]
     public async Task SaveOfferByCompanyAPITest()

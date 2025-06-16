@@ -1,5 +1,7 @@
 using honey_beer_server_app;
 using honey_beer_server_app.Models;
+using honey_beer_server_app.Repositories.DBContextNamespace;
+using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using System.Net.Http.Json;
 using System.Text;
@@ -87,4 +89,52 @@ public class CustomerControllerAPITests
         Assert.True(result2);
 
     }
+
+    //[Fact]
+    //public async Task SaveAllVotesAPITest()
+    //{
+    //    HttpClient client = application.CreateClient();
+    //    IServiceScope scope = application.Services.CreateScope();
+    //    DBContext context = scope.ServiceProvider.GetRequiredService<DBContext>();
+    //    Customer customer = new Customer()
+    //    {
+    //        Email= "customer31@gmail.com",
+    //        Password = "customer31",
+    //        Username = "customer31",
+    //        PersonalEmailInstance= new PersonalEmail()
+    //        {
+    //            Email = "customer31@gmail.com"
+    //        }
+    //    };
+    //    context.Customer.Add(customer);
+    //    EventType eventType = new EventType()
+    //    {
+    //        Name = "Promotion"
+    //    };
+    //    context.EventType.Add(eventType);
+    //    Event EventInstance = new Event()
+    //    {
+    //        BeginDate = DateTime.Now.AddDays(+10),
+    //        CreationDate = DateTime.Now,
+    //        Description = "New event",
+    //        EndDate = DateTime.Now.AddDays(+15),
+    //        Title = "New event title",
+    //        EventTypeId = eventType.EventTypeId,
+    //        EventTypeInstance = eventType
+    //    };
+    //    context.Event.Add(EventInstance);
+    //    Form form = new Form()
+    //    {
+
+    //    };
+    //    List<CustomerAnswer> votes = new List<CustomerAnswer>()
+    //    {
+    //        new CustomerAnswer()
+    //        {
+    //            CustomerId = customer.CustomerId,
+    //            Customer = customer,
+                
+    //        }
+    //    };
+    //}
 }
