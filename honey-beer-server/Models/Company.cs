@@ -7,7 +7,6 @@ using System.Text.RegularExpressions;
 namespace honey_beer_server_app.Models
 {
     [Table("company")]
-    [Index(nameof(PIB))]
     public class Company
     {
         [Key]
