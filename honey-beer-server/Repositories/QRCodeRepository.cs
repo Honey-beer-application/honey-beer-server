@@ -1,14 +1,20 @@
 ﻿using honey_beer_server_app.Models;
 using honey_beer_server_app.Repositories.DBContextNamespace;
 using Microsoft.EntityFrameworkCore.Storage;
+using Serilog;
 
 namespace honey_beer_server_app.Repositories
 {
     public class QRCodeRepository
     {
         private readonly DBContext _context;
+        private readonly ILogger<QRCodeRepository> logger;
 
-        public QRCodeRepository(DBContext context) => _context = context;
+        public QRCodeRepository(DBContext context, ILogger<QRCodeRepository> logger)
+        {
+            _context = context;
+            this.logger = logger;
+        }
 
         public bool SaveQRCode(QRCode qrCode)
         {
@@ -26,8 +32,9 @@ namespace honey_beer_server_app.Repositories
                 transation.Commit();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError(500, e.Message, e.StackTrace);
                 transation.Rollback();
                 throw;
             }

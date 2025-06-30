@@ -2,21 +2,24 @@
 using honey_beer_server_app.Repositories.DBContextNamespace;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
+using Serilog;
 
 namespace honey_beer_server_app.Repositories
 {
     public class CustomerRepository
     {
         private readonly DBContext _context;
-        public CustomerRepository(DBContext context) 
+        private readonly ILogger<CustomerRepository> logger;
+        public CustomerRepository(DBContext context, ILogger<CustomerRepository> logger) 
         {
             _context = context;
+            this.logger = logger;
         }
 
 
         public IEnumerable<Customer> GetAllCustomers()
         {
-            return _context.Customer.Include(customer => customer.PersonalEmailInstance).ToArray();
+            return _context.Customer.Include(customer => customer.PersonalEmailInstance);
         }
 
         public Customer CreateCustomer(Customer customer)
@@ -29,8 +32,9 @@ namespace honey_beer_server_app.Repositories
                 transaction.Commit();
                 return customer;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError(500, e.Message, e.StackTrace);
                 transaction.Rollback();
                 throw;
             }
@@ -47,8 +51,9 @@ namespace honey_beer_server_app.Repositories
                 transaction.Commit();
                 deleted = true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError(500, e.Message, e.StackTrace);
                 transaction.Rollback();
                 throw;
             }
@@ -68,8 +73,9 @@ namespace honey_beer_server_app.Repositories
                 transaction.Commit();
                 saved = true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError(500, e.Message, e.StackTrace);
                 transaction.Rollback();
                 throw;
             }

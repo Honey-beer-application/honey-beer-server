@@ -1,0 +1,149 @@
+# Comments are provided throughout this file to help you get started.
+# If you need more help, visit the Docker Compose reference guide at
+# https://docs.docker.com/go/compose-spec-reference/
+
+# Here the instructions define your application as a service called "server".
+# This service is built from the Dockerfile in the current directory.
+# You can add other services your application may depend on here, such as a
+# database or a cache. For examples, see the Awesome Compose repository:
+# https://github.com/docker/awesome-compose
+name: honey-beer
+services:
+    
+  grafana:
+    container_name: grafana
+    image: grafana/grafana:latest
+    volumes:
+      - ./grafana/grafana.ini:/etc/grafana/grafana.ini
+      - ./grafana/dashboards:/provisioning/dashboards
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    environment:
+      OTEL_RESOURCE_ATTRIBUTES: "service.name=grafana"
+    ports:
+      - 3000:3000
+    depends_on:
+      - prometheus
+      - tempo
+      - loki
+      - opentelemetry-collector
+
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus:latest
+    command: 
+      - "--web.enable-remote-write-receiver"
+      - "--web.enable-otlp-receiver"
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--web.console.libraries=/usr/share/prometheus/console_libraries"
+      - "--web.console.templates=/usr/share/prometheus/consoles"
+      - "--enable-feature=native-histograms"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - 9090:9090
+    depends_on:
+      - server
+      
+  tempo:
+    container_name: tempo
+    image: grafana/tempo:latest
+    command: 
+      - "-config.file=/etc/tempo.yaml"
+    ports:
+      - "4317:4317"  # otlp grpc
+      - "4318:4318"  # otlp http
+    volumes:
+      - ./tempo/tempo.yaml:/etc/tempo.yaml
+    depends_on:
+      - server
+
+  loki:
+    container_name: loki
+    image: grafana/loki:latest
+    volumes:
+      - ./loki/loki.yaml:/etc/loki/loki.yaml
+        #ports:
+        #- 3100:3100
+    command: 
+      - "-config.file=/etc/loki/loki.yaml"
+    depends_on:
+      - server
+  
+  opentelemetry-collector:
+    container_name: opentelemetry-collector
+    image: otel/opentelemetry-collector-contrib:latest
+    volumes:
+      - ./otel-config/otel-config.yaml:/etc/otel-config/otel-config.yaml
+    ports:
+    # - 1888:1888 pprof extension
+    - 8888:8888 # Prometheus metrics exposed by the Collector
+    - 8889:8889 # Prometheus exporter metrics
+    - 13133:13133 # health_check extension
+    # - 4317:4317 # OTLP gRPC receiver
+    # - 4318:4318 # OTLP http receiver
+    # - 55679:55679 zpages extension
+    command:
+      - "--config=/etc/otel-config/otel-config.yaml"
+    depends_on:
+      - prometheus
+      - tempo
+      - loki
+
+  server:
+    build:
+      context: .
+    container_name: server
+    ports:
+      - 7165:8080
+    # environment:
+    #   - OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=http://otel-collector:4318/v1/traces
+    #   - OTEL_EXPORTER_OTLP_METRICS_ENDPOINT=http://otel-collector:4318/v1/metrics
+    #   - OTEL_EXPORTER_OTLP_LOGS_ENDPOINT=http://otel-collector:4318/v1/logs
+    #   - OTEL_EXPORTER_OTLP_PROTOCOL=grpc  
+        # - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4317
+
+# The commented out section below is an example of how to define a PostgreSQL
+# database that your application can use. `depends_on` tells Docker Compose to
+# start the database before your application. The `db-data` volume persists the
+# database data between container restarts. The `db-password` secret is used
+# to set the database password. You must create `db/password.txt` and add
+# a password of your choosing to it before running `docker compose up`.
+    depends_on:
+      db:
+        condition: service_healthy
+    command: ["dotnet", "ef", "database update"]
+    healthcheck:
+      test: curl --fail http://localhost:8080/swagger/index.html || exit 1
+      interval: 5s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: db
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=stvarnoNovo10
+    volumes:
+      - ./backup.sql:/app/backup.sql
+      - ./mssql/data:/var/opt/mssql/data
+      - ./mssql/logs:/var/opt/mssql/logs
+      - ./mssql/secrets:/var/opt/mssql/secrets
+    ports:
+      - 1433:1433
+    expose:
+      - 1433
+    hostname: 
+      mssqlserver
+    healthcheck:
+      test: ["CMD","/opt/mssql-tools18/bin/sqlcmd", "-C", "-S", "localhost,1433", "-U", "sa", "-P", "stvarnoNovo10","-N", "-d", "master","-Q","SELECT 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  prometheus_data: # Defines a named volume for data persistence
+

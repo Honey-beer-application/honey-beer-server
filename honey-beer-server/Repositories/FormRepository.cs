@@ -1,14 +1,20 @@
 ﻿using honey_beer_server_app.Models;
 using honey_beer_server_app.Repositories.DBContextNamespace;
 using Microsoft.EntityFrameworkCore.Storage;
+using Serilog;
 
 namespace honey_beer_server_app.Repositories
 {
     public class FormRepository
     {
         private readonly DBContext _context;
+        private readonly ILogger<FormRepository> logger;
 
-        public FormRepository(DBContext context) => _context = context;
+        public FormRepository(DBContext context, ILogger<FormRepository> logger)
+        {
+            _context = context;
+            this.logger = logger;
+        }
 
         public bool Createform(Event eventForm)
         {
@@ -71,8 +77,9 @@ namespace honey_beer_server_app.Repositories
                 transaction.Commit();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError(500, e.Message, e.StackTrace);
                 transaction.Rollback();
                 throw;
             }

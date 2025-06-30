@@ -2,15 +2,18 @@
 using honey_beer_server_app.Repositories.DBContextNamespace;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
 
 namespace honey_beer_server_app.Repositories
 {
     public class CompanyRepository
     {
         private readonly DBContext _context;
-        public CompanyRepository(DBContext context) 
+        private readonly ILogger<CompanyRepository> logger;
+        public CompanyRepository(DBContext context, ILogger<CompanyRepository> logger) 
         { 
             _context = context;
+            this.logger = logger;
         }
 
         public bool CreateCompany(Company company)
@@ -27,8 +30,9 @@ namespace honey_beer_server_app.Repositories
                 transaction.Commit();
                 created = true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError(500, e.Message, e.StackTrace);
                 _context.SaveChanges();
                 transaction.Rollback();
                 throw;
@@ -48,8 +52,9 @@ namespace honey_beer_server_app.Repositories
                 transaction.Commit();
                 deleted = true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError(500, e.Message, e.StackTrace);
                 transaction.Rollback();
                 throw;
             }

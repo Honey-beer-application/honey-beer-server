@@ -1,0 +1,2 @@
+# running this for the first time to set up starting stage of database
+/opt/mssql-tools18/bin/sqlcmd -C -S localhost,1433 -U sa -P stvarnoNovo10 -N -d master -i /app/backup.sql

@@ -2,14 +2,20 @@
 using honey_beer_server_app.Repositories.DBContextNamespace;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
+using Serilog;
 
 namespace honey_beer_server_app.Repositories
 {
     public class OfferByCompanyRepository
     {
         private readonly DBContext _context;
+        private readonly ILogger<OfferByCompanyRepository> logger;
 
-        public OfferByCompanyRepository(DBContext context) => _context = context;
+        public OfferByCompanyRepository(DBContext context, ILogger<OfferByCompanyRepository> logger)
+        {
+            _context = context;
+            this.logger = logger;
+        }
 
         public IEnumerable<OfferByCompany> GetAllOffersByCompany()
         {
@@ -56,8 +62,9 @@ namespace honey_beer_server_app.Repositories
                 transaction.Commit();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError(500, e.Message, e.StackTrace);
                 transaction.Rollback();
                 throw;
             }
@@ -79,8 +86,9 @@ namespace honey_beer_server_app.Repositories
                 transaction.Commit();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError(500, e.Message, e.StackTrace);
                 transaction.Rollback();
                 throw;
             }

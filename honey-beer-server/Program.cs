@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+using honey_beer_server_app.Repositories;
 using honey_beer_server_app.Repositories.DBContextNamespace;
 using honey_beer_server_app.Services.CompanyService;
 using honey_beer_server_app.Services.CustomerService;
@@ -10,22 +10,75 @@ using honey_beer_server_app.Services.MeetingService;
 using honey_beer_server_app.Services.OfferByCompanyService;
 using honey_beer_server_app.Services.OfferSerice;
 using honey_beer_server_app.Services.PersonalEmailService;
+using honey_beer_server_app.Services.ProductService;
+using honey_beer_server_app.Services.PromotionService;
 using honey_beer_server_app.Services.QRCodeService;
 using honey_beer_server_app.Services.ReservationService;
 using honey_beer_server_app.Services.SentCompanyEmailService;
 using honey_beer_server_app.Services.ShoppingLocationService;
-using honey_beer_server_app.Repositories;
-using honey_beer_server_app.Services.ProductService;
-using honey_beer_server_app.Services.PromotionService;
+using Microsoft.EntityFrameworkCore;
+using OpenTelemetry.Exporter;
+using OpenTelemetry.Logs;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
+using Serilog;
+using Serilog.Sinks.OpenTelemetry;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Logging.ClearProviders();
+
+builder.Host.UseSerilog((context, loggerConfig) =>
+{
+    loggerConfig
+    //.WriteTo.Console()
+    .WriteTo.OpenTelemetry(options =>
+    {
+        options.ResourceAttributes.Add("service.name", "ASP_NET_CORE");
+        options.Endpoint = "http://opentelemetry-collector:4317";
+        options.Protocol = OtlpProtocol.Grpc;
+    });
+});
+
+
+builder.Services.AddOpenTelemetry()
+      .ConfigureResource(resource => resource.AddService("ASP_NET_CORE"))
+      .WithTracing(tracing => tracing
+          .AddAspNetCoreInstrumentation()
+          .AddHttpClientInstrumentation()
+          .AddAspNetCoreInstrumentation()
+          .AddOtlpExporter(options =>
+          {
+              options.Endpoint = new Uri("http://opentelemetry-collector:4317");
+              options.Protocol = OtlpExportProtocol.Grpc;
+          })
+          //.AddConsoleExporter()
+      )
+      .WithMetrics(metrics => metrics
+          .AddAspNetCoreInstrumentation()
+          .AddHttpClientInstrumentation()
+          .AddRuntimeInstrumentation()
+          .AddProcessInstrumentation()
+          .AddPrometheusExporter()
+          //.AddOtlpExporter((options, write) =>
+          //{
+          //    options.Endpoint = new Uri("http://opentelemetry-collector:4317");
+          //    options.Protocol = OtlpExportProtocol.Grpc;
+          //    write.PeriodicExportingMetricReaderOptions.ExportIntervalMilliseconds = 5000;
+          //})
+          //.AddConsoleExporter()
+      );
+
+
 
 // Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-string server = builder.Configuration["Data:CommandAPIConnection:ConnectionString"];
+string _dockerConnection = "Server=mssqlserver,1433;Initial Catalog=honey-beer-database;User Id=sa;Password=stvarnoNovo10;Encrypt=no;TrustServerCertificate=True;Integrated security=False;";
+string server = builder.Configuration["Data:CommandAPIConnection:ConnectionString"]?? _dockerConnection;
 builder.Services.AddDbContext<DBContext>(opt => opt.UseSqlServer(server));
 builder.Services.AddScoped<CompanyRepository>();
 builder.Services.AddScoped<CustomerRepository>();
@@ -81,6 +134,10 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+app.UseSerilogRequestLogging();
 
+app.UseOpenTelemetryPrometheusScrapingEndpoint();
+
+
+app.Run();
 public partial class Program { };

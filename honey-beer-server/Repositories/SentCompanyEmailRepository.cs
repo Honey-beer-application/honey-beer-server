@@ -1,14 +1,20 @@
 ﻿using honey_beer_server_app.Models;
 using honey_beer_server_app.Repositories.DBContextNamespace;
 using Microsoft.EntityFrameworkCore.Storage;
+using Serilog;
 
 namespace honey_beer_server_app.Repositories
 {
     public class SentCompanyEmailRepository
     {
         private readonly DBContext _context;
+        private readonly ILogger<SentCompanyEmailRepository> logger;
 
-        public SentCompanyEmailRepository(DBContext context) => _context = context;
+        public SentCompanyEmailRepository(DBContext context, ILogger<SentCompanyEmailRepository> logger)
+        {
+            _context = context;
+            this.logger = logger;
+        }
 
         public bool SaveEmail(SentCompanyEmail email)
         {
@@ -20,8 +26,9 @@ namespace honey_beer_server_app.Repositories
                 transaction.Commit();
                 return true;
             }
-            catch (Exception) 
-            { 
+            catch (Exception e) 
+            {
+                logger.LogError(500, e.Message, e.StackTrace);
                 transaction.Rollback(); 
                 throw; 
             }

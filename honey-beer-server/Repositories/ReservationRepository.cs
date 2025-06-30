@@ -2,14 +2,20 @@
 using honey_beer_server_app.Repositories.DBContextNamespace;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
+using Serilog;
 
 namespace honey_beer_server_app.Repositories
 {
     public class ReservationRepository
     {
         private readonly DBContext _context;
+        private readonly ILogger<ReservationRepository> logger;
 
-        public ReservationRepository(DBContext context) => _context = context;
+        public ReservationRepository(DBContext context, ILogger<ReservationRepository> logger)
+        {
+            _context = context;
+            this.logger = logger;
+        }
 
         public IEnumerable<Reservation> LoadAllReservations()
         {
@@ -50,8 +56,9 @@ namespace honey_beer_server_app.Repositories
                 transaction.Commit();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError(500, e.Message, e.StackTrace);
                 transaction.Rollback();
                 throw;
             }

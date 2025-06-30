@@ -1,6 +1,7 @@
 ﻿using honey_beer_server_app.Models;
 using honey_beer_server_app.Repositories.DBContextNamespace;
 using Microsoft.EntityFrameworkCore.Storage;
+using Serilog;
 using System;
 
 namespace honey_beer_server_app.Repositories
@@ -8,8 +9,13 @@ namespace honey_beer_server_app.Repositories
     public class OfferRepository
     {
         private readonly DBContext _context;
+        private readonly ILogger<OfferRepository> logger;
 
-        public OfferRepository(DBContext context) => _context = context;
+        public OfferRepository(DBContext context, ILogger<OfferRepository> logger)
+        {
+            _context = context;
+            this.logger = logger;
+        } 
 
         public IEnumerable<Offer> GetAllOffers()
         {
@@ -57,8 +63,9 @@ namespace honey_beer_server_app.Repositories
                 transaction.Commit();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError(500, e.Message, e.StackTrace);
                 transaction.Rollback();
                 throw;
             }
