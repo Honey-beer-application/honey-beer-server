@@ -1,0 +1,2 @@
+dotnet test honey-beer-server-appTest.csproj --logger html
+TestBucket
