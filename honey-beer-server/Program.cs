@@ -114,8 +114,9 @@ builder.Services.AddScoped<ISentCompanyEmailService, SentCompanyEmailService>();
 builder.Services.AddScoped<IShoppingLocationService, ShoppingLocationService>();
 string myCors = "MySpecificOrigins";
 builder.Services.AddCors(options=>options.AddPolicy(name: myCors, policy => { 
-    policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader(); 
-    policy.WithOrigins("https://honey-beer-application.github.io").AllowAnyMethod().AllowAnyHeader(); 
+    policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+    policy.WithOrigins("https://honey-beer-application.github.io").AllowAnyMethod().AllowAnyHeader();
+    policy.WithOrigins("http://angular:4200").AllowAnyMethod().AllowAnyHeader();
 }));
 
 var app = builder.Build();

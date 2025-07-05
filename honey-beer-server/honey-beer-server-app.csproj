@@ -43,6 +43,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Docker\" />
     <Folder Include="loki\log\" />
     <Folder Include="Migrations\" />
   </ItemGroup>

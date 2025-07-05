@@ -39,7 +39,7 @@ services:
       - "--web.console.templates=/usr/share/prometheus/consoles"
       - "--enable-feature=native-histograms"
     volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - 9090:9090
     depends_on:
@@ -74,7 +74,7 @@ services:
     container_name: opentelemetry-collector
     image: otel/opentelemetry-collector-contrib:latest
     volumes:
-      - ./otel-config/otel-config.yaml:/etc/otel-config/otel-config.yaml
+      - ./otel-collector/otel-config.yaml:/etc/otel-config/otel-config.yaml
     ports:
     # - 1888:1888 pprof extension
     - 8888:8888 # Prometheus metrics exposed by the Collector
@@ -112,7 +112,7 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    command: ["dotnet", "ef", "database update"]
+    # command: ["dotnet", "ef", "database update"]
     healthcheck:
       test: curl --fail http://localhost:8080/swagger/index.html || exit 1
       interval: 5s
@@ -127,7 +127,7 @@ services:
       - ACCEPT_EULA=Y
       - MSSQL_SA_PASSWORD=stvarnoNovo10
     volumes:
-      - ./backup.sql:/app/backup.sql
+      - ./db/backup.sql:/app/backup.sql
       - ./mssql/data:/var/opt/mssql/data
       - ./mssql/logs:/var/opt/mssql/logs
       - ./mssql/secrets:/var/opt/mssql/secrets
