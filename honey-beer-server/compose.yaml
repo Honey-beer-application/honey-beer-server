@@ -10,6 +10,7 @@
 name: honey-beer
 services:
   influxdb:
+    container_name: influxdb
     image: influxdb:1.8
 #    entrypoint: /bin/sh
 #    user: root
@@ -19,6 +20,7 @@ services:
       - INFLUXDB_DB=k6    
 
   k6:
+    container_name: k6
     image: grafana/k6:latest
 #    entrypoint: /bin/sh
 #    user: root
