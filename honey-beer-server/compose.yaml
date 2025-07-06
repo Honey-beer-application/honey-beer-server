@@ -9,7 +9,32 @@
 # https://github.com/docker/awesome-compose
 name: honey-beer
 services:
-    
+  influxdb:
+    image: influxdb:1.8
+#    entrypoint: /bin/sh
+#    user: root
+    ports:
+      - "8086:8086"
+    environment:
+      - INFLUXDB_DB=k6    
+
+  k6:
+    image: grafana/k6:latest
+#    entrypoint: /bin/sh
+#    user: root
+    command: run --out influxdb=http://influxdb:8086/k6 /scripts/test.js
+    ports:
+      - "6565:6565"
+    environment:
+      - K6_OUT=influxdb=http://influxdb:8086/k6
+    volumes:
+      - ./k6/test.js:/scripts/test.js
+    depends_on:
+      server:
+        condition: service_healthy
+      influxdb:
+        condition: service_started
+
   grafana:
     container_name: grafana
     image: grafana/grafana:latest
@@ -32,7 +57,8 @@ services:
     image: prom/prometheus:latest
     command: 
       - "--web.enable-remote-write-receiver"
-      - "--web.enable-otlp-receiver"
+      # - "--web.enable-otlp-receiver"
+      - "--enable-feature=otlp-write-receiver"
       - "--config.file=/etc/prometheus/prometheus.yml"
       - "--storage.tsdb.path=/prometheus"
       - "--web.console.libraries=/usr/share/prometheus/console_libraries"
