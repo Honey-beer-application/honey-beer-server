@@ -102,7 +102,7 @@
         "y": 1
       },
       "id": 1,
-      "interval": ">1s",
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [
@@ -530,7 +530,7 @@
         "y": 1
       },
       "id": 10,
-      "interval": ">1s",
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [
@@ -1332,7 +1332,7 @@
         "y": 12
       },
       "id": 5,
-      "interval": ">1s",
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -1559,7 +1559,7 @@
         "y": 12
       },
       "id": 8,
-      "interval": ">1s",
+      "interval": "1s",
       "options": {
         "calculate": true,
         "calculation": {
